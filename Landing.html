@@ -176,7 +176,7 @@ function 登陆(){
     用户名: "雄氏老方",
     账号: "1598",
     密码: "8951",
-    授权状态: true
+    授权状态: false
   }];
   var 数据库账号检测次数 = 0;
   var 账号 = document.getElementById("账号").value;
@@ -185,7 +185,7 @@ function 登陆(){
     alert("请输入账号");
   }else{
     do{
-      if(!(用户账号数据列表[数据库账号检测次数]) == undefined){
+      if(!(用户账号数据列表[数据库账号检测次数] == undefined)){
         if(账号 == 用户账号数据列表[数据库账号检测次数].账号){
           if(密码 == ""){
             alert("请输入密码");
@@ -218,7 +218,7 @@ function 登陆(){
 };
 function 注册(){
     window.location.href="https://izimui.github.io/WEB-SITE/Register.html";
-}
+};
 </script>
 </head>
 <body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false' οnselect='document.selection.empty()' οncοpy='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()' >
