@@ -3,23 +3,30 @@
 <head>
 <meta charset="UTF-8"/>
 <title>
-您当前的设备已中病毒
+您的设备已中病毒
 </title>
 <script>
 //此JS 纯属娱乐 请勿当真
+start();
+function start(){
+var 病毒名字 = "鸡你太美–HU027型号病毒–永久感染传播性病毒"
 var 植入次数 = 1;
 do{
 if(植入次数 <= 100){
-alert("您的设备已中〔 鸡你太美–HU027型号病毒–永久感染传播性病毒 〕\n如需解除此病毒，请立即支付〔 律师函500份 〕\n已向您的准备植入病毒次数〔 "+植入次数+"/100 〕");
+alert("您的设备已中\n〔 " + 病毒名字 + " 〕\n如需解除此病毒，请立即支付〔 律师函500份 〕\n已向您的准备植入病毒次数〔 " +植入次数+ "/100 〕");
 植入次数 = 植入次数 + 1;
 } else {
 var 转跳 = confirm("点击下一步有好康的");
 if(转跳 == true){
 window.open("http://chushou.tv/room/41990704.htm");
+} else {
+alert("检测到您点击了取消按钮\n我们马上开始继续向您的设备植入〔" + 病毒名字 + "〕");
+start();
 };
 break;
 };
 }while(true);
+};
 </script>
 </head>
 <body>
