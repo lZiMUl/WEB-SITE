@@ -36,6 +36,7 @@ var 当前时间 = {
 秒:new Date().getSeconds()
 };
 alert(当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.日 + "日" + 当前时间.时 + "时" + 当前时间.分 + "分" + 当前时间.秒 + "秒");
+myFunction();
 function myFunction() {
     var x = document.getElementById("snackbar")
     x.className = "show";
@@ -43,7 +44,7 @@ function myFunction() {
     x.className = 
     x.className.replace("show", ""); 
 }, 3000);
-}
+};
 </script>
 <style>
 #snackbar {
