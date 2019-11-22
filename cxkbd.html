@@ -30,7 +30,6 @@ break;
 }while(true);
 };
 function 时间(){
-do{
 setTimeout(function(){
 var 当前时间 = {
 年:new Date().getFullYear(),
@@ -42,8 +41,8 @@ var 当前时间 = {
 };
 var 输出 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.日 + "日" + 当前时间.时 + "时" + 当前时间.分 + "分" + 当前时间.秒 + "秒";
 document.getElementById("现在时间").innerHTML = 输出;
+时间();
 },100)
-}while(true)
 };
 </script>
 </head>
