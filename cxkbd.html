@@ -35,11 +35,14 @@ var 当前时间 = {
 分:new Date().getMinutes(),
 秒:new Date().getSeconds()
 };
-alert(当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.日 + "日" + 当前时间.时 + "时" + 当前时间.分 + "分" + 当前时间.秒 + "秒");
+document.getElementById("text").value=当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.日 + "日" + 当前时间.时 + "时" + 当前时间.分 + "分" + 当前时间.秒 + "秒";
 </script>
 </head>
 <body>
-<iframe width="100%" height="300" src="https://c.runoob.com/iframe/3145" allowfullscreen="allowfullscreen" frameborder="0">
-</iframe>
+<div>
+<h1 id="text">
+正在加载
+</h1>
+</div>
 </body>
 </html>
