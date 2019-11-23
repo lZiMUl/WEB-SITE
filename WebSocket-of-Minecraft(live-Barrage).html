@@ -2,10 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <title>
 WebSocket of Minecraft(live Barrage)
 </title>
-<script>
+<script type="text/javascript">
 var 直播平台 = null;
 function 绑定(){
 var 房间号 = document.getElementById("Room number").value;
@@ -83,21 +84,29 @@ alert("请选择直播平台在绑定");
 }
 }
 </script>
-<style>
+<style type="text/css">
 .GUI{
+  position:relative;
+  left:3%;
   margin:0 auto;
   background-color:orange;
   border-radius:9px;
 }
 .房间号输入框{
+  position:relative;
+  left:3%;
+  margin:0 auto;
   border-radius:9px;
   }
 .绑定按钮{
+  position:relative;
+  left:3%;
+  margin:0 auto;
   border-radius:9px;
   }
 </style>
 </head>
-<body>
+<body οncοntextmenu='return false' οndragstart='return false' onselectstart ='return false' οnselect='document.selection.empty()' οncοpy='document.selection.empty()' onbeforecopy='return false' οnmοuseup='document.selection.empty()'>
 <div class="GUI">
 <form action="" method="get"> 
 请选择直播平台
