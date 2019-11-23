@@ -66,7 +66,7 @@ alert("您已取消绑定")
 alert("请输入房间号，在绑定");
 };
 break;
-case "B站直播":
+case "哔站直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
@@ -85,6 +85,7 @@ alert("请选择直播平台在绑定");
 </script>
 </head>
 <body>
+<div>
 <form action="" method="get"> 
 请选择直播平台
 <br />
@@ -120,11 +121,12 @@ alert("请选择直播平台在绑定");
 </label>
 <br />
 <label>
-<input type="radio" name="Live-ordinary" value="B站" OnClick="直播平台='B站直播'">
-B站-直播
+<input type="radio" name="Live-ordinary" value="哔站" OnClick="直播平台='哔站直播'">
+哔站-直播
 </input>
 </label>
 </form>
+</div>
 <br />
 <input type="number" id="Room number" placeholder="请输入房间号"/>
 <input type="button" value="绑定" OnClick="绑定()"/>
