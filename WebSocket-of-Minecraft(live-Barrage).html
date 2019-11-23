@@ -1,77 +1,19 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>
+WebSocket of Minecraft(live Barrage)
+</title>
+<script>
+function 绑定(){
 
-<meta charset="utf-8" />  
-
-<title>WebSocket Test</title>  
-
-<script language="javascript"type="text/javascript">  
-
-    var wsUri ="ws://echo.websocket.org/"; 
-
-    var output;  
-
-    
-
-    function init() { 
-
-        output = document.getElementById("output"); 
-
-        testWebSocket(); 
-
-    }  
-
- 
-
-    function testWebSocket() { 
-
-        websocket = new WebSocket(wsUri); 
-
-        websocket.onopen = function(evt) { 
-
-            onOpen(evt) 
-
-        }; 
-
-        websocket.onclose = function(evt) { 
-
-            onClose(evt) 
-
-        }; 
-
-        websocket.onmessage = function(evt) { 
-
-            onMessage(evt) 
-
-        }; 
-
-        websocket.onerror = function(evt) { 
-
-            onError(evt) 
-
-        }; 
-
-    }  
-
- 
-
-    function onOpen(evt) { 
-
-        writeToScreen("CONNECTED"); 
-
-        doSend("WebSocket rocks"); 
-
-    }  
-
- 
-
-    function onClose(evt) { 
-
-        writeToScreen("DISCONNECTED"); 
-
-    }  
-
- 
-
-    function onMessage(evt) { 
-
-        writeToScreen('<span style="color: blue;"
+}
+</script>
+</head>
+<body>
+<input type=""/>
+<input type="text"/>
+<input type="button" OnClick="绑定()"/>
+</body>
+<html>
