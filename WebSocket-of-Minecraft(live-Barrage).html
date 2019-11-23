@@ -84,15 +84,21 @@ alert("请选择直播平台在绑定");
 }
 </script>
 <style>
-.选择直播平台{
+GUI.{
   margin:0 auto;
   background-color:orange;
   border-radius:9px;
 }
+.房间号输入框{
+  border-radius:9px;
+  }
+.绑定按钮{
+  border-radius:9px;
+  }
 </style>
 </head>
 <body>
-<div class="选择直播平台">
+<div class="GUI">
 <form action="" method="get"> 
 请选择直播平台
 <br />
@@ -134,8 +140,8 @@ alert("请选择直播平台在绑定");
 </label>
 </form>
 <br />
-<input type="number" id="Room number" placeholder="请输入房间号"/>
-<input type="button" value="绑定" OnClick="绑定()"/>
+<input type="number" id="Room number" class="房间号输入框" placeholder="请输入房间号"/>
+<input type="button" value="绑定" class="绑定按钮" OnClick="绑定()"/>
 </div>
 </body>
 <html>
