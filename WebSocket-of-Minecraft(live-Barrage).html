@@ -12,7 +12,7 @@ while(true){
 var radio = document.getElementsByName("Live-ordinary")[i]
 if(radio.checked == false){
 i=i+1
-} else {
+} else if(radio.checked == true){
 alert(radio.value)
 i=0
 break;
