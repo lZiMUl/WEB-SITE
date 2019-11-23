@@ -8,22 +8,58 @@ WebSocket of Minecraft(live Barrage)
 <script>
 var 直播平台 = null;
 function 绑定(){
+var 房间号 = document.getElementById("Room number").value;
 if(!(直播平台 == null)){
 switch(直播平台){
 case "虎牙直播":
-alert("您已选择直播平台为：〔"+直播平台+"〕")
+if(!(房间号 == "")){
+var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕")
+if(yes == true){
+} else {
+};
+} else {
+alert("请输入房间号");
+}
 break;
 case "斗鱼直播":
-alert("您已选择直播平台为：〔"+直播平台+"〕")
+if(!(房间号 == "")){
+var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕")
+if(yes == true){
+} else {
+};
+} else {
+alert("请输入房间号");
+}
 break;
 case "触手直播":
-alert("您已选择直播平台为：〔"+直播平台+"〕")
+if(!(房间号 == "")){
+var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕")
+if(yes == true){
+} else {
+};
+} else {
+alert("请输入房间号");
+}
 break;
 case "龙珠直播":
-alert("您已选择直播平台为：〔"+直播平台+"〕")
+if(!(房间号 == "")){
+var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕")
+if(yes == true){
+} else {
+};
+} else {
+alert("请输入房间号");
+}
 break;
 case "企鹅直播":
-alert("您已选择直播平台为：〔"+直播平台+"〕")
+if(!(房间号 == "")){
+var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕")
+if(yes == true){
+} else {
+};
+} else {
+alert("请输入房间号");
+}
 break;
 }
 } else {
@@ -68,7 +104,7 @@ alert("请选择直播平台在绑定");
 </label>
 </form>
 <br />
-<input type="text" placeholder="请输入房间号"/>
+<input type="text" id="Room number" placeholder="请输入房间号"/>
 <input type="button" value="绑定" OnClick="绑定()"/>
 </body>
 <html>
