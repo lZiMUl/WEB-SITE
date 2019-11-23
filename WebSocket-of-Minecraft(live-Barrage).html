@@ -9,17 +9,18 @@ WebSocket of Minecraft(live Barrage)
 var i = 0;
 function 绑定(){
 while(true){
-var radio = document.getElementsByName("Live-ordinary")[i]
+var radio = document.getElementsByName("Live-ordinary")[i];
 if(!(i == 0)){
 if(radio.checked == false){
-i=i+1
+i=i+1;
 } else if(radio.checked == true){
-alert(radio.value)
-i=0
+alert(radio.value);
+i=0;
 break;
 }
 } else {
-alert("请选择直播平台在绑定")
+alert("请选择直播平台在绑定");
+break;
 }
 }
 }
