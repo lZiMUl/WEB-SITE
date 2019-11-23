@@ -10,12 +10,14 @@ var i = 0;
 function 绑定(){
 while(true){
 var radio = document.getElementsByName("Live-ordinary")[i]
-if(radio.checked == true){
+if(radio.checked == false){
 i=i+1
 } else {
 alert(radio.value)
 i=0
 break;
+} else if(i == 4){
+alert("请选择平台在绑定")
 }
 }
 }
@@ -27,31 +29,31 @@ break;
 <br />
 <br />
 <label>
-<input type="radio" name="Live-ordinary" value="嘿嘿">
+<input type="radio" name="Live-ordinary" value="虎牙">
 虎牙-直播
 </input>
 </label>
 <br />
 <label>
-<input type="radio" name="Live-ordinary" value="哈哈">
+<input type="radio" name="Live-ordinary" value="斗鱼">
 斗鱼-直播
 </input>
 </label>
 <br />
 <label>
-<input type="radio" name="Live-ordinary" value="">
+<input type="radio" name="Live-ordinary" value="触手">
 触手-直播
 </input>
 </label>
 <br />
 <label>
-<input type="radio" name="Live-ordinary" value="">
+<input type="radio" name="Live-ordinary" value="龙珠">
 龙珠-直播
 </input>
 </label>
 <br />
 <label>
-<input type="radio" name="Live-ordinary" value="">
+<input type="radio" name="Live-ordinary" value="企鹅">
 企鹅-直播
 </input>
 </label>
