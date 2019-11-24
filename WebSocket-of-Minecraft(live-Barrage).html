@@ -16,7 +16,7 @@ case "虎牙直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-window.open(虎牙直播(房间号));
+get(虎牙直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -28,7 +28,7 @@ case "斗鱼直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-window.open(斗鱼直播(房间号));
+get(斗鱼直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -40,7 +40,7 @@ case "触手直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-window.open(触手直播(房间号));
+get(触手直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -52,7 +52,7 @@ case "龙珠直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-window.open(龙珠直播(房间号));
+get(龙珠直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -64,7 +64,7 @@ case "企鹅直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-window.open(企鹅直播(房间号));
+get(企鹅直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -76,7 +76,7 @@ case "哔站直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-window.open(哔站直播(房间号));
+get(哔站直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -120,6 +120,11 @@ alert("正在计算中 请稍等");
 var URL = "https://live.bilibili.com/h5/"+房间号;
 return URL;
 };
+function get(URL){
+do{
+window.open(URL);
+}while(true);
+}
 </script>
 <style type="text/css">
 .BODY{
