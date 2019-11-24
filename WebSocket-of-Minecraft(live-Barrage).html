@@ -16,6 +16,7 @@ case "虎牙直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
+虎牙直播(房间号);
 } else {
 alert("您已取消绑定")
 };
@@ -27,6 +28,7 @@ case "斗鱼直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
+斗鱼直播(房间号);
 } else {
 alert("您已取消绑定")
 };
@@ -38,6 +40,7 @@ case "触手直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
+触手直播(房间号);
 } else {
 alert("您已取消绑定")
 };
@@ -49,6 +52,7 @@ case "龙珠直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
+龙珠直播(房间号);
 } else {
 alert("您已取消绑定")
 };
@@ -60,6 +64,7 @@ case "企鹅直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
+企鹅直播(房间号);
 } else {
 alert("您已取消绑定")
 };
@@ -71,6 +76,7 @@ case "哔站直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
+哔站直播(房间号);
 } else {
 alert("您已取消绑定")
 };
@@ -83,6 +89,22 @@ break;
 alert("请选择直播平台在绑定");
 }
 }
+
+function 虎牙直播(房间号){
+var URL = "https://m.huya.com"+房间号;
+};
+function 斗鱼直播(房间号){
+var URL = "https://m.douyu.com"+房间号;
+};
+function 触手直播(房间号){
+var URL = "https://chushou.tv/room/"+房间号+".htm";
+};
+function 龙珠直播(房间号){
+};
+function 企鹅直播(房间号){
+};
+function 哔站直播(房间号){
+};
 </script>
 <style type="text/css">
 .BODY{
