@@ -8,7 +8,6 @@ WebSocket of Minecraft(live Barrage)
 </title>
 <script type="text/javascript">
 var 直播平台 = null;
-var 我的直播间地址;
 function 绑定(){
 var 房间号 = document.getElementById("Room number").value;
 if(!(直播平台 == null)){
@@ -17,7 +16,7 @@ case "虎牙直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-我的直播间地址=虎牙直播(房间号);
+window.open(虎牙直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -29,7 +28,7 @@ case "斗鱼直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-我的直播间地址=斗鱼直播(房间号);
+window.open(斗鱼直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -41,7 +40,7 @@ case "触手直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-我的直播间地址=触手直播(房间号);
+window.open(触手直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -53,7 +52,7 @@ case "龙珠直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-我的直播间地址=龙珠直播(房间号);
+window.open(龙珠直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -65,7 +64,7 @@ case "企鹅直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-我的直播间地址=企鹅直播(房间号);
+window.open(企鹅直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -77,7 +76,7 @@ case "哔站直播":
 if(!(房间号 == "")){
 var yes = confirm("您已选择直播平台为:〔 " + 直播平台 + " 〕\n当前直播平台您的房间号为〔 " + 房间号 + " 〕\n是否确认")
 if(yes == true){
-我的直播间地址=哔站直播(房间号);
+window.open(哔站直播(房间号));
 } else {
 alert("您已取消绑定");
 };
@@ -100,35 +99,27 @@ function 斗鱼直播(房间号){
 alert("正在计算中 请稍等");
 var URL = "https://m.douyu.com"+房间号;
 return URL;
-转跳;
 };
 function 触手直播(房间号){
 alert("正在计算中 请稍等");
 var URL = "https://chushou.tv/room/"+房间号+".htm";
 return URL;
-转跳;
 };
 function 龙珠直播(房间号){
 alert("正在计算中 请稍等");
 var URL = "http://m.longzhu.com/z"+房间号;
 return URL;
-转跳;
 };
 function 企鹅直播(房间号){
 alert("正在计算中 请稍等");
 var URL = "https://m.live.qq.com/"+房间号;
 return URL;
-转跳();
 };
 function 哔站直播(房间号){
 alert("正在计算中 请稍等");
 var URL = "https://live.bilibili.com/h5/"+房间号+"?visit_id=13bm20j3shhs";
 return URL;
-转跳();
 };
-function 转跳(){
-window.open(我的直播间地址)
-}
 </script>
 <style type="text/css">
 .BODY{
