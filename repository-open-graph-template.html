@@ -1,0 +1,83 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>
+</title>
+<script>
+var Userlist = [{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"17",
+Occupation:"程序员/主播",
+Url:""
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"11",
+Occupation:"程序员/主播",
+Url:""
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"15",
+Occupation:"程序员/主播",
+Url:""
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"16",
+Occupation:"程序员/主播",
+Url:""
+}];
+var 次数 = 0;
+刷新();
+function 刷新(){
+if(Userlist[次数].Name == undefined){
+setTimeout(function(){
+var 获取控件 = document.getElementById("个人信息");
+获取控件.innerHTML=添加(次数+1,Userlist[次数].Name,Userlist[次数].Gender,Userlist[次数].Age,Userlist[次数].Occupation,Userlist[次数].Url);
+次数=次数+1;
+刷新();
+},1000)}};
+
+var 标签体 = "";
+function 添加(SerialNumber,Name,Gender,Age,Occupation,Url){
+var 标签头 = "<tr>";
+var 序号 = "<td align='center'><p id='序号'>"+SerialNumber+"</p></td>";
+var 姓名 = "<td align='center'><p id='姓名'>"+Name+"</p></td>";
+var 性别 = "<td align='center'><p id='性别'>"+Gender+"</p></td>";
+var 年龄 = "<td align='center'><p id='年龄'>"+Age+"</p></td>";
+var 职业 = "<td align='center'><p id='职业'>"+Occupation+"</p></td>";
+var 详细内容 = "<td align='center'><p id='详细内容'><a href=''>"+Url+"</a></p></td></tr>";
+var 标签尾 = "</tr>";
+var 添加标签体 = 标签体+标签头+序号+姓名+性别+年龄+职业+详细内容+标签尾;
+标签体=添加标签体;
+
+return "<tr><th>序号</th><th>姓名</th><th>性别</th><th>年龄</th><th>职业</th><th>详细内容</th></tr>"+添加标签体;
+}
+</script>
+</head>
+<body>
+<div>
+<table id="个人信息" border="1px">
+<tr>
+<th>序号</th>
+<th>姓名</th>
+<th>性别</th>
+<th>年龄</th>
+<th>职业</th>
+<th>详细内容</th>
+</tr>
+<tr>
+<td><p id="序号"></p></td>
+<td><p id="姓名"></p></td>
+<td><p id="性别"></p></td>
+<td><p id="年龄"></p></td>
+<td><p id="职业"></p></td>
+<td><p id="详细内容"></p></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
