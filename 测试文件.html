@@ -1,0 +1,81 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>
+实时刷新列表HTML
+</title>
+<script>
+var Userlist = [{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"17",
+Occupation:"程序员/主播",
+Url:"axsv"
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"11",
+Occupation:"程序员/主播",
+Url:"axsv"
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"15",
+Occupation:"程序员/主播",
+Url:"axsv"
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"16",
+Occupation:"程序员/主播",
+Url:"http://www.baidu.com"
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"15",
+Occupation:"程序员/主播",
+Url:"axsv"
+},{
+Name:"触手TV紫幕",
+Gender:"男",
+Age:"15",
+Occupation:"程序员/主播",
+Url:"axsv"
+}];
+
+var 次数 = 0;
+刷新();
+function 刷新(){
+if(!(Userlist[次数].Name == undefined)){
+setTimeout(function(){
+var 获取控件 = document.getElementById("个人信息");
+获取控件.innerHTML=添加新列表(次数+1,Userlist[次数].Name,Userlist[次数].Gender,Userlist[次数].Age,Userlist[次数].Occupation,Userlist[次数].Url);
+次数=次数+1;
+刷新();
+},100)}};
+
+var 标签体仓库 = "";
+function 添加新列表(SerialNumber,Name,Gender,Age,Occupation,Url){
+var 标签头 = "<tr>";
+var 序号 = "<td align='center'><p id='序号'>"+SerialNumber+"</p></td>";
+var 姓名 = "<td align='center'><p id='姓名'>"+Name+"</p></td>";
+var 性别 = "<td align='center'><p id='性别'>"+Gender+"</p></td>";
+var 年龄 = "<td align='center'><p id='年龄'>"+Age+"</p></td>";
+var 职业 = "<td align='center'><p id='职业'>"+Occupation+"</p></td>";
+var 详细内容 = "<td align='center'><a id='详细内容' href="+Url+">点击查看</a></td>";
+var 标签尾 = "</tr>";
+var 生成标签体 = 标签体仓库+标签头+序号+姓名+性别+年龄+职业+详细内容+标签尾;
+标签体仓库=生成标签体;
+
+return "<tr><th>序号</th><th>姓名</th><th>性别</th><th>年龄</th><th>职业</th><th>详细内容</th></tr>"+生成标签体;
+}
+</script>
+</head>
+<body>
+<div>
+<table id="个人信息" align="center" border="1px">
+</table>
+</div>
+</body>
+</html>
