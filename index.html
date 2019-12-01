@@ -181,13 +181,13 @@ var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
 alert("数据正常");
+视频类型更新();
 var 获取视频类型 = document.getElementById("unittype").value();
 if(!(获取视频类型 == "All")){
 默认视频类型=最新视频类型;
 alert(获取视频类型)
 Reset(最新视频类型);
 }
-视频类型更新();
 },100)};
 </script>
 </head>
