@@ -94,31 +94,31 @@ var VideoList = [{
 },{
   VideoTitle:"骨灰杨诺夫",
   VideoUrl:"VideoData/骨灰杨诺夫.mp4",
-  VideoType:"KuaishouTechnology",
+  VideoType:"Kuaishou",
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 },{
   VideoTitle:"社会人恶语",
   VideoUrl:"VideoData/社会人恶语.mp4",
-  VideoType:"KuaishouTechnology",
+  VideoType:"Kuaishou",
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 },{
   VideoTitle:"好臭啊",
   VideoUrl:"VideoData/好臭啊.mp4",
-  VideoType:"KuaishouTechnology",
+  VideoType:"Kuaishou",
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 },{
   VideoTitle:"老八中餐1",
   VideoUrl:"VideoData/老八中餐1.mp4",
-  VideoType:"KuaishouTechnology",
+  VideoType:"Kuaishou",
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 },{
   VideoTitle:"老八中餐2",
   VideoUrl:"VideoData/老八中餐2.mp4",
-  VideoType:"KuaishouTechnology",
+  VideoType:"Kuaishou",
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 }];
@@ -130,13 +130,11 @@ var 设置视频列表 = document.getElementById("视频列表");
     次数=0;
     switch(Newestvideotype){
     case "All":
-    alert("已切换到全部视频类型")
     All();
     break;
 
-    case "KuaishouTechnology":
-    alert("已切换到快手视频类型")
-    KuaishouTechnology();
+    case "Kuaishou":
+    Kuaishou();
     break;
 
     case "FamousScene":
@@ -148,7 +146,6 @@ var 设置视频列表 = document.getElementById("视频列表");
     break;
 
     case "Philosophy":
-    alert("已切换到哲♂学视频类型")
     Philosophy();
     break;
 
@@ -183,15 +180,15 @@ function Philosophy(){
     },100)
 }};
 
-function KuaishouTechnology(){
+function Kuaishou(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
-      if(VideoList[次数].VideoType == "KuaishouTechnology"){
+      if(VideoList[次数].VideoType == "Kuaishou"){
       var 设置视频列表 = document.getElementById("视频列表");
       设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
   };
-      KuaishouTechnology();
+      Kuaishou();
     },100)
 }};
 
