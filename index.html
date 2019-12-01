@@ -114,9 +114,9 @@ function 刷新(){
       次数=次数+1;
       刷新();
     },100)
-} else {
+if(次数 == VideoList.length) {
 alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面点击蓝色超链接联系站长");
-}};
+}}};
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
   var 标签头 = "<tr>";
