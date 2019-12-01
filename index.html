@@ -124,16 +124,20 @@ var VideoList = [{
 }];
 
 function Reset(Newestvideotype){
-var 设置视频列表 = document.getElementById("视频列表");
-    设置视频列表.innerHTML="";
+switch(Newestvideotype){
+    case "All":
+    var 全部视频标签 = document.getElementById("视频列表");
+    全部视频标签.innerHTML="";
     标签体仓库="";
     次数=0;
-    switch(Newestvideotype){
-    case "All":
     All();
     break;
 
     case "Kuaishou":
+    var 快手视频标签 = document.getElementById("视频列表");
+    快手视频标签.innerHTML="";
+    标签体仓库="";
+    次数=0;
     Kuaishou();
     break;
 
@@ -146,6 +150,10 @@ var 设置视频列表 = document.getElementById("视频列表");
     break;
 
     case "Philosophy":
+    var 哲学视频标签 = document.getElementById("视频列表");
+    哲学视频标签.innerHTML="";
+    标签体仓库="";
+    次数=0;
     Philosophy();
     break;
 
