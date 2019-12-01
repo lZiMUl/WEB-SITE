@@ -129,12 +129,21 @@ function All(){
     },100)
 }};
 
+function Reset(){
+var 设置视频列表 = document.getElementById("视频列表");
+    设置视频列表.innerHTML="";
+    标签体仓库="";
+    return true;
+}
+
 function Philosophy(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
+      if(VideoList[次数].VideoType == "Philosophy"){
       var 设置视频列表 = document.getElementById("视频列表");
       设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
+  };
       Philosophy();
     },100)
 }};
