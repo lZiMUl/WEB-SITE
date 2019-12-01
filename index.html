@@ -123,20 +123,22 @@ function All(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      设置视频列表.innerHTML=添加全部新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       All();
     },100)
 }};
+
 function Philosophy(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      设置视频列表.innerHTML=添加哲学新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoType,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       Philosophy();
     },100)
 }};
+
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
   var 标签头 = "<tr>";
@@ -152,6 +154,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoConte
   标签体仓库=生成标签体;
   return 生成标签体;
 };
+
 function DownloadVideoFile(DownloadVideo){
   var link = document.createElement('a');
   link.setAttribute("download",DownloadVideo+".mp4");
@@ -181,11 +184,11 @@ alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底
 <label for="unittype">
 <font color='FF9933'>请选择视频类型〔 </font></label>
 <select id="unittype" name="unittype" autofocus >
-   <option OnClick="All()" selected>全 部</option>
+   <option OnClick="All();标签体仓库=''" selected>全 部</option>
    <option OnClick="alert('尽情期待')">普 通</option>
    <option OnClick="alert('尽情期待')">名场面</option>
    <option OnClick="alert('尽情期待')">鬼 畜</option>
-   <option OnClick="Philosophy()">哲♂学</option>
+   <option OnClick="Philosophy();标签体仓库=''">哲♂学</option>
    <option OnClick="alert('尽情期待')">恐 怖</option>
 </select>
 <label for="unittype"><font color='#FF9933'> 〕</font></label><br><br>
