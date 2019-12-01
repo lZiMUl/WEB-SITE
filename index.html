@@ -1,0 +1,181 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+<title>
+BiliBlil—禁播视频观看网站 〔 Beta版 〕
+</title>
+<style type="text/css">
+.parent {
+  width: 100%;
+  height: 50px;
+  top: 4px;
+  position: relative;
+  border-radius:9px;
+}
+.parent>input:first-of-type {
+  width: 210px;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  border-radius:9px;
+} 
+.parent>input:first-of-type:focus {
+  border: 1px solid #317ef3;
+  padding-left: 1px;
+  border-radius:9px;
+}  
+.parent>input:last-of-type {
+  width: 100px;
+  height: 44px;
+  background: #FF3333;
+  border: 1px solid #317ef3;
+  color: #fff;
+  margin-top: 7px;
+  font-size: 26px;
+  outline: none;
+  border-radius:9px;
+}
+.parent>input::-ms-input-placeholder{
+  text-align: center;
+  border-radius:9px;
+}
+.parent>input::-webkit-input-placeholder{
+  text-align: center;
+  border-radius:9px;
+}
+</style>
+<script>
+var VideoList = [{
+  VideoTitle:"香蕉君(经典映像)",
+  VideoUrl:"VideoData/香蕉君.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"VANの更衣室",
+  VideoUrl:"VideoData/VANの更衣室.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"VANの演讲",
+  VideoUrl:"VideoData/VANの演讲.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"VANの自我介绍",
+  VideoUrl:"VideoData/VANの自我介绍.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"浴室发现♂香蕉君",
+  VideoUrl:"VideoData/浴室发现♂香蕉君.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"哲学老外",
+  VideoUrl:"VideoData/哲学老外.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"骨灰杨诺夫",
+  VideoUrl:"VideoData/骨灰杨诺夫.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"社会人恶语",
+  VideoUrl:"VideoData/社会人恶语.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"好臭啊",
+  VideoUrl:"VideoData/好臭啊.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"老八中餐1",
+  VideoUrl:"VideoData/老八中餐1.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+},{
+  VideoTitle:"老八中餐2",
+  VideoUrl:"VideoData/老八中餐2.mp4",
+  VideoAuthor:"触手TV紫幕",
+  VideoContent:"暂无"
+}];
+var 次数 = 0;
+刷新();
+function 刷新(){
+  if(!(VideoList[次数].VideoTitle == undefined)){
+    setTimeout(function(){
+      var 设置视频列表 = document.getElementById("视频列表");
+      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      次数=次数+1;
+      刷新();
+    },100)}};
+var 标签体仓库 = "";
+function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
+  var 标签头 = "<tr>";
+  var 序号 = "<td align='center' bgcolor='#00FFCC'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
+  var 视频标题 = "<td align='center' bgcolor='#00FFCC'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
+  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
+  var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
+  var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
+  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><button style='border-radius:9px;' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button></td>";
+  var 标签尾 = "</tr>";
+  var 分割线 = "<td align='center' bgcolor='#CC3300'><br><p align='center'>——————分割线——————</p><br></td>";
+  var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+标签头+视频作者+标签尾+视频简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
+  标签体仓库=生成标签体;
+  return 生成标签体;
+};
+function DownloadVideoFile(DownloadVideo){
+  var link = document.createElement('a');
+  link.setAttribute("download",DownloadVideo+".mp4");
+  link.href = "VideoData/"+DownloadVideo+".mp4";
+  link.click();
+};
+function UploadVideo(){
+alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
+}
+</script>
+</head>
+<body bgcolor="#FFC0CB">
+<table align="center" border="1px" bgcolor='#FFFF33'>
+<td  width='330' height='180' bgcolor="#3333FF">
+<br>
+<div align="center">
+<form action="" class="parent">
+<input type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br><br>
+<input type="button" value="搜索" OnClick="alert('暂未开放')"/>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+<label for="unittype">
+<font color='FF9933'>请选择视频类型〔 </font></label>
+<select id="unittype" name="unittype" autofocus >
+   <option value="1" selected>全 部</option>
+   <option value="2">普 通</option>
+   <option value="3">名场面</option>
+   <option value="4">鬼 畜</option>
+   <option value="5">哲♂学</option>
+   <option value="6">恐 怖</option>
+</select>
+<label for="unittype"><font color='#FF9933'> 〕</font></label><br><br>
+<button style='border-radius:9px;' OnClick='UploadVideo()'>上传视频</button><br>
+<br>
+</div>
+</td>
+</table>
+<table id="视频列表" align="center" border="1px" bgcolor='#FFFF33'>
+</table>
+<table align="center" border="1px" bgcolor='#FFFF33'>
+<td align='center' bgcolor='#696969'  width='330' height='60' bgcolor="#969696"><a width='338' height='20' href='https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes'>联系站长</a></td>
+</table>
+</div>
+</body>
+</html>
