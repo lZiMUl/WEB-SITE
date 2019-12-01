@@ -175,6 +175,17 @@ function DownloadVideoFile(DownloadVideo){
 function UploadVideo(){
 alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
 };
+
+var 默认视频类型 = All;
+function 视频类型更新(){
+setTimeout(function(){
+var 获取视频类型 = document.getElementById("unittype");
+var 最新视频类型 = 获取视频类型.value;
+if(!(最新视频类型 == All)){
+默认视频类型=最新视频类型;
+最新视频类型();
+}
+},100)};
 </script>
 </head>
 <body bgcolor="#FFC0CB">
@@ -195,11 +206,11 @@ alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底
 <label for="unittype">
 <font color='FF9933'>请选择视频类型〔 </font></label>
 <select id="unittype" name="unittype" autofocus >
-   <option OnClick="All();标签体仓库=''" selected>全 部</option>
+   <option value="All" selected>全 部</option>
    <option OnClick="alert('尽情期待')">普 通</option>
    <option OnClick="alert('尽情期待')">名场面</option>
    <option OnClick="alert('尽情期待')">鬼 畜</option>
-   <option OnClick="Philosophy();标签体仓库=''">哲♂学</option>
+   <option value="Philosophy">哲♂学</option>
    <option OnClick="alert('尽情期待')">恐 怖</option>
 </select>
 <label for="unittype"><font color='#FF9933'> 〕</font></label><br><br>
