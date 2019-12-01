@@ -129,7 +129,7 @@ var 设置视频列表 = document.getElementById("视频列表");
     break;
 
     case "KuaishouTechnology":
-    alert("尽情期待");
+    KuaishouTechnology();
     break;
 
     case "FamousScene":
@@ -172,6 +172,18 @@ function Philosophy(){
       次数=次数+1;
   };
       Philosophy();
+    },100)
+}};
+
+function KuaishouTechnology(){
+  if(!(VideoList[次数].VideoTitle == undefined)){
+    setTimeout(function(){
+      if(VideoList[次数].VideoType == "KuaishouTechnology"){
+      var 设置视频列表 = document.getElementById("视频列表");
+      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      次数=次数+1;
+  };
+      KuaishouTechnology();
     },100)
 }};
 
