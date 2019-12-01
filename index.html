@@ -177,17 +177,21 @@ function UploadVideo(){
 alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
 };
 
-var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
+启动更新();
 视频类型更新();
+},100)};
+
+var 默认视频类型 = "All";
+function 启动更新(){
 var 获取视频类型 = document.getElementById("unittype").value();
 if(!(获取视频类型 == "All")){
-默认视频类型=最新视频类型;
+默认视频类型=获取视频类型;
 alert(获取视频类型)
-Reset(最新视频类型);
+Reset(获取视频类型);
 }
-},100)};
+}
 </script>
 </head>
 <body bgcolor="#FFC0CB">
