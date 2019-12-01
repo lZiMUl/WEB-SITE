@@ -117,6 +117,15 @@ var VideoList = [{
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 }];
+
+function Reset(){
+var 设置视频列表 = document.getElementById("视频列表");
+    设置视频列表.innerHTML="";
+    标签体仓库="";
+    次数=0;
+    return true;
+};
+
 var 次数 = 0;
 All();
 function All(){
@@ -128,13 +137,6 @@ function All(){
       All();
     },100)
 }};
-
-function Reset(){
-var 设置视频列表 = document.getElementById("视频列表");
-    设置视频列表.innerHTML="";
-    标签体仓库="";
-    return true;
-}
 
 function Philosophy(){
   if(!(VideoList[次数].VideoTitle == undefined)){
