@@ -128,6 +128,7 @@ var 设置视频列表 = document.getElementById("视频列表");
 
 var 次数 = 0;
 All();
+视频类型更新();
 function All(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -183,6 +184,7 @@ var 获取视频类型 = document.getElementById("unittype");
 var 最新视频类型 = 获取视频类型.value;
 if(!(最新视频类型 == All)){
 默认视频类型=最新视频类型;
+Reset();
 最新视频类型();
 }
 },100)};
