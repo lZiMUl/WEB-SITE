@@ -212,9 +212,9 @@ function 启动更新(){
 var 获取视频类型 = document.getElementById("unittype");
 var 更新视频类型 = 获取视频类型.selectedIndex;
 var 最新视频类型 = 获取视频类型[更新视频类型].value;
-if(!(最新视频类型 == "All")){
+if(!(最新视频类型 == 默认视频类型)){
 默认视频类型=最新视频类型;
-alert(最新视频类型)
+alert(最新视频类型);
 Reset(最新视频类型);
 }
 }
