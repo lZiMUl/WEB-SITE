@@ -123,7 +123,7 @@ function All(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加全部新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       All();
     },100)
@@ -133,7 +133,7 @@ function Philosophy(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加哲学新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoType,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       Philosophy();
     },100)
