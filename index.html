@@ -105,6 +105,8 @@ var VideoList = [{
   VideoContent:"暂无"
 }];
 var 次数 = 0;
+var 公告 =true;
+Tips();
 刷新();
 function 刷新(){
   if(!(VideoList[次数].VideoTitle == undefined)){
@@ -113,12 +115,8 @@ function 刷新(){
       设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       刷新();
-    },1000)
-if(次数 == VideoList.length-1) {
-setTimeout(function(){
-alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面点击蓝色超链接联系站长");
-},100)
-}}};
+    },100)
+}};
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoAuthor,VideoContent){
   var 标签头 = "<tr>";
@@ -142,6 +140,15 @@ function DownloadVideoFile(DownloadVideo){
 };
 function UploadVideo(){
 alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
+}
+function Tips(){
+setTimeout(function(){
+if(公告 == true) {
+alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面点击蓝色超链接联系站长");
+Tips();
+} else {
+公告=false;
+}},100)
 }
 </script>
 </head>
