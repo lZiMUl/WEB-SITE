@@ -144,8 +144,8 @@ function Philosophy(){
       if(VideoList[次数].VideoType == "Philosophy"){
       var 哲学视频列表 = document.getElementById("视频列表");
       哲学视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
-      次数=次数+1;
   };
+      次数=次数+1;
       Philosophy();
     },100)
 }};
@@ -156,8 +156,8 @@ function Kuaishou(){
       if(VideoList[次数].VideoType == "Kuaishou"){
       var 快手视频列表 = document.getElementById("视频列表");
       视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+}; 
       次数=次数+1;
-};
       Kuaishou();
     },100)
 }};
