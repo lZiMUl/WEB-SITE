@@ -125,39 +125,40 @@ var VideoList = [{
 
 
 
-var 次数 = 0;
+var 视频次数 = 0;
+var 序列次数 = 0;
 All();
 视频类型更新();
 function All(){
-  if(!(VideoList[次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
       var 全部视频列表 = document.getElementById("视频列表");
-      全部视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
-      次数=次数+1;
+      全部视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoContent);
+      视频次数=视频次数+1;
       All();
     },100)
 }};
 
 function Philosophy(){
-  if(!(VideoList[次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
-      if(VideoList[次数].VideoType == "Philosophy"){
+      if(VideoList[视频次数].VideoType == "Philosophy"){
       var 哲学视频列表 = document.getElementById("视频列表");
-      哲学视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      哲学视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoContent);
   };
-      次数=次数+1;
+      视频次数=视频次数+1;
       Philosophy();
     },100)
 }};
 
 function Kuaishou(){
-  if(!(VideoList[次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
-      if(VideoList[次数].VideoType == "Kuaishou"){
+      if(VideoList[视频次数].VideoType == "Kuaishou"){
       var 快手视频列表 = document.getElementById("视频列表");
-      视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoContent);
 }; 
-      次数=次数+1;
+      视频次数=视频次数+1;
       Kuaishou();
     },100)
 }};
@@ -207,7 +208,8 @@ switch(最新视频类型){
     var 全部视频标签 = document.getElementById("视频列表");
     全部视频标签.innerHTML="";
     标签体仓库="";
-    次数=0;
+    视频次数=0;
+    序列次数=0;
     All();
     break;
 
@@ -215,7 +217,8 @@ switch(最新视频类型){
     var 快手视频标签 = document.getElementById("视频列表");
     快手视频标签.innerHTML="";
     标签体仓库="";
-    次数=0;
+    视频次数=0;
+    序列次数=0;
     Kuaishou();
     break;
 
@@ -231,7 +234,8 @@ switch(最新视频类型){
     var 哲学视频标签 = document.getElementById("视频列表");
     哲学视频标签.innerHTML="";
     标签体仓库="";
-    次数=0;
+    视频次数=0;
+    序列次数=0;
     Philosophy();
     break;
 
