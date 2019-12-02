@@ -52,7 +52,7 @@ alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n�
 var VideoList = [{
   VideoTitle:"香蕉君(经典映像)",
   VideoUrl:"VideoData/香蕉君(经典映像).mp4",
-  VideoType:"Philosophy",
+  VideoType:"Philosophys",
   VideoAuthor:"触手TV紫幕",
   VideoContent:"暂无"
 },{
@@ -123,45 +123,7 @@ var VideoList = [{
   VideoContent:"暂无"
 }];
 
-function Reset(Newestvideotype){
-switch(Newestvideotype){
-    case "All":
-    var 全部视频标签 = document.getElementById("视频列表");
-    全部视频标签.innerHTML="";
-    标签体仓库="";
-    次数=0;
-    All();
-    break;
 
-    case "Kuaishou":
-    var 快手视频标签 = document.getElementById("视频列表");
-    快手视频标签.innerHTML="";
-    标签体仓库="";
-    次数=0;
-    Kuaishou();
-    break;
-
-    case "FamousScene":
-    alert("尽情期待");
-    break;
-
-    case "Ghost":
-    alert("尽情期待");
-    break;
-
-    case "Philosophy":
-    var 哲学视频标签 = document.getElementById("视频列表");
-    哲学视频标签.innerHTML="";
-    标签体仓库="";
-    次数=0;
-    Philosophy();
-    break;
-
-    case "Terror":
-    alert("尽情期待");
-    break;
-};
-};
 
 var 次数 = 0;
 All();
@@ -192,10 +154,9 @@ function Kuaishou(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       if(VideoList[次数].VideoType == "Kuaishou"){
-      var 快手次数 = 0;
       var 快手视频列表 = document.getElementById("视频列表");
-      快手视频列表.innerHTML=添加新列表(快手次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
-      快手次数=快手次数+1;
+      视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      次数=次数+1;
 };
       Kuaishou();
     },100)
@@ -240,9 +201,46 @@ var 更新视频类型 = 获取视频类型.selectedIndex;
 var 最新视频类型 = 获取视频类型[更新视频类型].value;
 if(!(最新视频类型 == 默认视频类型)){
 默认视频类型=最新视频类型;
-Reset(最新视频类型);
+
+switch(最新视频类型){
+    case "All":
+    var 全部视频标签 = document.getElementById("视频列表");
+    全部视频标签.innerHTML="";
+    标签体仓库="";
+    次数=0;
+    All();
+    break;
+
+    case "Kuaishou":
+    var 快手视频标签 = document.getElementById("视频列表");
+    快手视频标签.innerHTML="";
+    标签体仓库="";
+    次数=0;
+    Kuaishou();
+    break;
+
+    case "FamousScene":
+    alert("尽情期待");
+    break;
+
+    case "Ghost":
+    alert("尽情期待");
+    break;
+
+    case "Philosophy":
+    var 哲学视频标签 = document.getElementById("视频列表");
+    哲学视频标签.innerHTML="";
+    标签体仓库="";
+    次数=0;
+    Philosophy();
+    break;
+
+    case "Terror":
+    alert("尽情期待");
+    break;
+};
 }
-}
+};
 </script>
 </head>
 <body bgcolor="#FFC0CB">
