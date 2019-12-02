@@ -142,6 +142,15 @@ var 序列次数 = 0;
 视频类型更新();
 All();
 
+function Searchbox(){
+alert("暂未开放")
+var 获取内容 = document.getElementById("Searchbox").value;
+if(获取内容 == ""){
+alert("您还没有输入搜索内容");
+} else {
+window.location.href="https://m.baidu.com/s?word="+获取内容;
+}};
+
 function All(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -243,15 +252,6 @@ switch(最新视频类型){
 视频类型更新();
 },100)
 };
-
-function Searchbox(){
-alert("暂未开放")
-var 获取内容 = document.getElementById("Searchbox").value;
-if(获取内容 == ""){
-alert("您还没有输入搜索内容");
-} else {
-window.location.href="https://m.baidu.com/s?word="+获取内容;
-}};
 </script>
 </head>
 <body bgcolor="#FFC0CB">
