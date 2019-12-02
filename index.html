@@ -50,6 +50,7 @@ BSFPVW官网《 B站禁播视频观看网站 〔 Beta版 〕》
 <script>
 alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面点击蓝色超链接联系站长");
 alert("——————硬核公告——————\n如果界面错位请联系站长修复")
+
 var VideoList = [{
   VideoTitle:"香蕉君(经典映像)",
   VideoType:"Philosophy",
@@ -135,10 +136,12 @@ var VideoList = [{
   VideoAuthor:"触手TV紫幕",
   VideoAuthorContent:"我的B站频道：<a href='https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581'>点击访问</a>"
 }];
+
 var 视频次数 = 0;
 var 序列次数 = 0;
 视频类型更新();
 All();
+
 function All(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -149,6 +152,7 @@ function All(){
       All();
     },10)
 }};
+
 function Philosophy(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -161,6 +165,7 @@ function Philosophy(){
       Philosophy();
     },10)
 }};
+
 function Kuaishou(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -173,6 +178,7 @@ function Kuaishou(){
       Kuaishou();
     },10)
 }};
+
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoContent,VideoAuthor,VideoAuthorContent){
   var 标签头 = "<tr><div align='center'>";
@@ -189,15 +195,18 @@ function 添加新列表(SerialNumber,VideoTitle,VideoContent,VideoAuthor,VideoA
   标签体仓库=生成标签体;
   return 生成标签体;
 };
+
 function DownloadVideoFile(DownloadVideo){
   var link = document.createElement('a');
   link.setAttribute("download",DownloadVideo+".mp4");
   link.href = "VideoData/"+DownloadVideo+".mp4";
   link.click();
 };
+
 function UploadVideo(){
 alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
 };
+
 var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
@@ -234,6 +243,14 @@ switch(最新视频类型){
 视频类型更新();
 },100)
 };
+
+function Searchbox(){
+var 获取内容 = document.getElementById("Searchbox").value;
+if(获取内容 == ""){
+alert("您还没有输入搜索内容");
+} else {
+window.open();
+}};
 </script>
 </head>
 <body bgcolor="#FFC0CB">
@@ -242,8 +259,8 @@ switch(最新视频类型){
 <br>
 <div align="center">
 <form action="" class="parent">
-<input type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br><br>
-<input type="button" value="搜索" OnClick="alert('暂未开放')"/>
+<input id="Searchbox" type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br><br>
+<input type="button" value="搜索" OnClick="Searchbox()"/>
 </form>
 </div>
 <br>
