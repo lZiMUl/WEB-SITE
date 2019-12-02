@@ -196,11 +196,11 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuth
   var 标签头 = "<tr>";
   var 序号 = "<td align='center' bgcolor='#00FFCC'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
   var 视频标题 = "<td align='center' bgcolor='#00FFCC'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
-  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'></video></td>";
+  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
   var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
   var 视频作者简介 = "<td align='center' bgcolor='#00FFCC'><p>视频作者简介：〔 "+VideoAuthorContent+" 〕</p></td>";
-  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px;' width='160' height='90' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button><br><br></td>";
+  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px; width='160';height='90'' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button><br><br></td>";
   var 标签尾 = "</tr>";
   var 分割线 = "<td align='center' bgcolor='#CC3300'><br><p align='center'>——————分割线——————</p><br></td>";
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+视频简介+标签头+视频作者+标签尾+视频作者简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
