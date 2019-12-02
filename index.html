@@ -130,11 +130,10 @@ var VideoList = [{
 }];
 
 
-
 var 视频次数 = 0;
 var 序列次数 = 0;
-All();
 视频类型更新();
+All();
 function All(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -194,24 +193,19 @@ function DownloadVideoFile(DownloadVideo){
   link.href = "VideoData/"+DownloadVideo+".mp4";
   link.click();
 };
+
 function UploadVideo(){
 alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
 };
 
+var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
-启动更新();
-视频类型更新();
-},100)};
-
-var 默认视频类型 = "All";
-function 启动更新(){
 var 获取视频类型 = document.getElementById("unittype");
 var 更新视频类型 = 获取视频类型.selectedIndex;
 var 最新视频类型 = 获取视频类型[更新视频类型].value;
 if(!(最新视频类型 == 默认视频类型)){
 默认视频类型=最新视频类型;
-
 switch(最新视频类型){
     case "All":
     var 全部视频标签 = document.getElementById("视频列表");
@@ -251,8 +245,9 @@ switch(最新视频类型){
     case "Terror":
     alert("尽情期待");
     break;
-};
-}
+}};
+视频类型更新();
+},100)
 };
 </script>
 </head>
