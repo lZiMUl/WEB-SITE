@@ -163,7 +163,7 @@ function All(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
       var 全部视频列表 = document.getElementById("视频列表");
-      全部视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
+      全部视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoPoster,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
       序列次数=序列次数+1;
       视频次数=视频次数+1;
       All();
@@ -174,7 +174,7 @@ function Philosophy(){
     setTimeout(function(){
       if(VideoList[视频次数].VideoType == "Philosophy"){
       var 哲学视频列表 = document.getElementById("视频列表");
-      哲学视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
+      哲学视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoPoster,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
       序列次数=序列次数+1;
 };
       视频次数=视频次数+1;
@@ -186,7 +186,7 @@ function Kuaishou(){
     setTimeout(function(){
       if(VideoList[视频次数].VideoType == "Kuaishou"){
       var 快手视频列表 = document.getElementById("视频列表");
-      快手视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
+      快手视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoPoster,VideoList[视频次数].VideoUrl,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
       序列次数=序列次数+1;
 }; 
       视频次数=视频次数+1;
@@ -194,11 +194,11 @@ function Kuaishou(){
     },10)
 }};
 var 标签体仓库 = "";
-function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuthor,VideoAuthorContent){
+function 添加新列表(SerialNumber,VideoTitle,VideoPoster,VideoUrl,VideoContent,VideoAuthor,VideoAuthorContent){
   var 标签头 = "<tr>";
   var 序号 = "<td align='center' bgcolor='#00FFCC'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
   var 视频标题 = "<td align='center' bgcolor='#00FFCC'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
-  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='390' height='250' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
+  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='390' height='250' poster="+VideoPoster+"controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
   var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
   var 视频作者简介 = "<td align='center' bgcolor='#00FFCC'><p>视频作者简介：〔 "+VideoAuthorContent+" 〕</p></td>";
