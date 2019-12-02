@@ -49,6 +49,7 @@ BSFPVW官网《 B站禁播视频观看网站 〔 Beta版 〕》
 </style>
 <script>
 alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面点击蓝色超链接联系站长");
+alert("——————硬核公告——————\n如果界面错位请联系站长修复")
 var VideoList = [{
   VideoTitle:"香蕉君(经典映像)",
   VideoType:"Philosophy",
@@ -205,21 +206,16 @@ var 更新视频类型 = 获取视频类型.selectedIndex;
 var 最新视频类型 = 获取视频类型[更新视频类型].value;
 if(!(最新视频类型 == 默认视频类型)){
 默认视频类型=最新视频类型;
-switch(最新视频类型){
-    case "All":
-    var 全部视频标签 = document.getElementById("视频列表");
+var 全部视频标签 = document.getElementById("视频列表");
     全部视频标签.innerHTML="";
     标签体仓库="";
     视频次数=0;
     序列次数=0;
+switch(最新视频类型){
+    case "All":
     All();
     break;
     case "Kuaishou":
-    var 快手视频标签 = document.getElementById("视频列表");
-    快手视频标签.innerHTML="";
-    标签体仓库="";
-    视频次数=0;
-    序列次数=0;
     Kuaishou();
     break;
     case "FamousScene":
@@ -229,11 +225,6 @@ switch(最新视频类型){
     alert("尽情期待");
     break;
     case "Philosophy":
-    var 哲学视频标签 = document.getElementById("视频列表");
-    哲学视频标签.innerHTML="";
-    标签体仓库="";
-    视频次数=0;
-    序列次数=0;
     Philosophy();
     break;
     case "Terror":
