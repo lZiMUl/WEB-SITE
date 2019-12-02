@@ -148,8 +148,6 @@ var VideoList = [{
   VideoAuthor:"触手TV紫幕",
   VideoAuthorContent:"我的B站频道：<a href='https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581'>点击访问</a>"
 }];
-
-
 var 视频次数 = 0;
 var 序列次数 = 0;
 视频类型更新();
@@ -164,7 +162,6 @@ function All(){
       All();
     },10)
 }};
-
 function Philosophy(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -177,7 +174,6 @@ function Philosophy(){
       Philosophy();
     },10)
 }};
-
 function Kuaishou(){
   if(!(VideoList[视频次数].VideoTitle == undefined)){
     setTimeout(function(){
@@ -190,35 +186,31 @@ function Kuaishou(){
       Kuaishou();
     },10)
 }};
-
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuthor,VideoAuthorContent){
   var 标签头 = "<tr>";
   var 序号 = "<td align='center' bgcolor='#00FFCC'><p>视频序列：〔 "+SerialNumber+" 〕</p></td>";
   var 视频标题 = "<td align='center' bgcolor='#00FFCC'><p>视频标题：〔 "+VideoTitle+" 〕</p</td>";
-  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='330' height='180' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
+  var 视频地址 = "<td align='center' bgcolor='#00FFCC'><video bgcolor='#00FFCC' width='390' height='250' controls='controls'><source src="+VideoUrl+" type='video/mp4'/></video></td>";
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>视频简介：〔 "+VideoContent+" 〕</p></td>";
   var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>视频作者：〔 "+VideoAuthor+" 〕</p></td>";
   var 视频作者简介 = "<td align='center' bgcolor='#00FFCC'><p>视频作者简介：〔 "+VideoAuthorContent+" 〕</p></td>";
-  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px; width='160';height='90'' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button><br><br></td>";
+  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px; width:290px;height:50px' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button><br><br></td>";
   var 标签尾 = "</tr>";
   var 分割线 = "<td align='center' bgcolor='#CC3300'><br><p align='center'>——————分割线——————</p><br></td>";
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+视频简介+标签头+视频作者+标签尾+视频作者简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
   标签体仓库=生成标签体;
   return 生成标签体;
 };
-
 function DownloadVideoFile(DownloadVideo){
   var link = document.createElement('a');
   link.setAttribute("download",DownloadVideo+".mp4");
   link.href = "VideoData/"+DownloadVideo+".mp4";
   link.click();
 };
-
 function UploadVideo(){
 alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
 };
-
 var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
@@ -236,7 +228,6 @@ switch(最新视频类型){
     序列次数=0;
     All();
     break;
-
     case "Kuaishou":
     var 快手视频标签 = document.getElementById("视频列表");
     快手视频标签.innerHTML="";
@@ -245,15 +236,12 @@ switch(最新视频类型){
     序列次数=0;
     Kuaishou();
     break;
-
     case "FamousScene":
     alert("尽情期待");
     break;
-
     case "Ghost":
     alert("尽情期待");
     break;
-
     case "Philosophy":
     var 哲学视频标签 = document.getElementById("视频列表");
     哲学视频标签.innerHTML="";
@@ -262,7 +250,6 @@ switch(最新视频类型){
     序列次数=0;
     Philosophy();
     break;
-
     case "Terror":
     alert("尽情期待");
     break;
@@ -274,7 +261,7 @@ switch(最新视频类型){
 </head>
 <body bgcolor="#FFC0CB">
 <table align="center" border="1px" bgcolor='#FFFF33'>
-<td  width='330' height='180' bgcolor="#3333FF">
+<td  width='390' height='180' bgcolor="#3333FF">
 <br>
 <div align="center">
 <form action="" class="parent">
@@ -282,6 +269,7 @@ switch(最新视频类型){
 <input type="button" value="搜索" OnClick="alert('暂未开放')"/>
 </form>
 </div>
+<br>
 <br>
 <br>
 <br>
@@ -306,7 +294,7 @@ switch(最新视频类型){
 <table id="视频列表" align="center" border="1px" bgcolor='#FFFF33'>
 </table>
 <table align="center" border="1px" bgcolor='#FFFF33'>
-<td align='center' bgcolor='#696969'  width='330' height='60' bgcolor="#969696"><a width='338' height='20' href='https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes'>联系站长</a></td>
+<td align='center' bgcolor='#696969'  width='390' height='60' bgcolor="#969696"><a width='338' height='20' href='https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes'>联系站长</a></td>
 </table>
 </div>
 </body>
