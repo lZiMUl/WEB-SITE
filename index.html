@@ -169,8 +169,8 @@ All();
 function All(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
-      var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      var 全部视频列表 = document.getElementById("视频列表");
+      全部视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
       All();
     },100)
@@ -180,8 +180,8 @@ function Philosophy(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       if(VideoList[次数].VideoType == "Philosophy"){
-      var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      var 哲学视频列表 = document.getElementById("视频列表");
+      哲学视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
   };
       Philosophy();
@@ -191,9 +191,10 @@ function Philosophy(){
 function Kuaishou(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
+alert("哈哈")
       if(VideoList[次数].VideoType == "Kuaishou"){
-      var 设置视频列表 = document.getElementById("视频列表");
-      设置视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      var 快手视频列表 = document.getElementById("视频列表");
+      快手视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
       次数=次数+1;
   };
       Kuaishou();
