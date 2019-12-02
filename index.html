@@ -192,12 +192,10 @@ function Kuaishou(){
   if(!(VideoList[次数].VideoTitle == undefined)){
     setTimeout(function(){
       if(VideoList[次数].VideoType == "Kuaishou"){
-alert("嘿嘿哈哈")
+      var 快手次数 = 0;
       var 快手视频列表 = document.getElementById("视频列表");
-      快手视频列表.innerHTML=添加新列表(次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
-      次数=次数+1;
-  } else {
-      Kuaishou();
+      快手视频列表.innerHTML=添加新列表(快手次数+1,VideoList[次数].VideoTitle,VideoList[次数].VideoUrl,VideoList[次数].VideoAuthor,VideoList[次数].VideoContent);
+      快手次数=快手次数+1;
 };
       Kuaishou();
     },100)
