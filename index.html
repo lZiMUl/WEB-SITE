@@ -254,6 +254,7 @@ switch(最新视频类型){
 </script>
 </head>
 <body bgcolor="#FFC0CB">
+<div>
 <table align="center" style="margin:0px"  border="1px" bgcolor='#FFFF33'>
 <td  width="390" height="180" bgcolor="#3333FF">
 <br>
@@ -270,7 +271,7 @@ switch(最新视频类型){
 <br>
 <div align="center">
 <label for="unittype">
-<font color="#FF9933">请选择视频类型〔 </font></label>
+<font color="#FF9933">请选择视频类型〔 </font>
 <select id="unittype" name="unittype" autofocus >
    <option value="All" selected>全 部</option>
    <option value="Kuaishou">快 手</option>
@@ -279,19 +280,30 @@ switch(最新视频类型){
    <option value="Philosophy">哲♂学</option>
    <option value="Terror">恐 怖</option>
 </select>
-<label for="unittype"><font color="#FF9933"> 〕</font></label><br><br>
-<button style="border-radius:9px;" OnClick="UploadVideo()">上传视频</button><br>
+</label>
+
+<label for="unittype"><font color="#FF9933"> 〕</font>
+</label>
+
+<br>
+<br>
+
+<button style="border-radius:9px;" OnClick="UploadVideo()">上传视频</button>
+
+<br>
 <br>
 </div>
-</td>
+
 <div align='center'>
-</table>
 <table id="视频列表" align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
 </table>
 </div>
+
+<div align='center'>
 <table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
 <td align="center"" bgcolor="#696969"  width="390" height="60"><a width="338" height="20" href="https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes">联系站长</a></td>
 </table>
 </div>
+
 </body>
 </html>
