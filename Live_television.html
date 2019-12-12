@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"/>
+<head>
+<title>
+电视直播
+</title>
+<script type="text/javascript">
+var 直播源 = new Array({
+  LiveTitle:"CCTV-1(综合频道)",
+  LiveUrl:"http://223.110.245.170/PLTV/3/224/3221225530/index.m3u8"
+},{
+  LiveTitle:"CCTV-2(财经频道)",
+  LiveUrl:"http://cctvcnch5c.v.wscdns.com/live/cctv2_2/index.m3u8"
+},{
+  LiveTitle:"CCTV-3(综艺频道)",
+  LiveUrl:"http://cctvcnch5c.v.wscdns.com/live/cctv3_2/index.m3u8"
+},{
+  LiveTitle:"CCTV-4(中文国际频道)",
+  LiveUrl:"http://cctvcnch5c.v.wscdns.com/live/cctv4_2/index.m3u8"
+},{
+  LiveTitle:"CCTV-5(体育频道)",
+  LiveUrl:"http://cctvcnch5c.v.wscdns.com/live/cctv5_2/index.m3u8"
+},{
+  LiveTitle:"CCTV-6(电影频道)",
+  LiveUrl:"http://cctvcnch5c.v.wscdns.com/live/cctv6_2/index.m3u8"
+},{
+  LiveTitle:"CCTV-7(军事·农业频道)",
+  LiveUrl:"http://183.207.249.6/PLTV/3/224/3221225546/index.m3u8"
+},{
+  LiveTitle:"CCTV-8(电视剧频道)",
+  LiveUrl:"http://223.110.245.139:80/PLTV/4/224/3221227304/index.m3u8"
+},{
+  LiveTitle:"CCTV-9(记录频道)",
+  LiveUrl:"http://223.110.245.161/ott.js.chinamobile.com/PLTV/3/224/3221225868/index.m3u8"
+},{
+  LiveTitle:"CCTV-10(科教频道)",
+  LiveUrl:"http://223.110.245.170/ott.js.chinamobile.com/PLTV/3/224/3221225550/index.m3u8"
+},{
+  LiveTitle:"CCTV-11(戏曲频道)",
+  LiveUrl:"http://223.110.245.153/ott.js.chinamobile.com/PLTV/3/224/3221227384/index.m3u8"
+},{
+  LiveTitle:"CCTV-12(社会与法频道)",
+  LiveUrl:"http://223.110.245.170/ott.js.chinamobile.com/PLTV/3/224/3221225556/index.m3u8"
+},{
+  LiveTitle:"CCTV-13(新闻频道)",
+  LiveUrl:"http://cctvcnch5c.v.wscdns.com/live/cctv13_2/index.m3u8"
+},{
+  LiveTitle:"CCTV-14(少儿频道)",
+  LiveUrl:"http://223.110.245.155/ott.js.chinamobile.com/PLTV/3/224/3221225813/index.m3u8"
+},{
+  LiveTitle:"CCTV-15(音乐频道)",
+  LiveUrl:"http://111.40.205.87/PLTV/88888888/224/3221225721/index.m3u8"
+});
+var 视频次数 = 0;
+开始加载();
+function 开始加载(){
+  if(!(直播源[视频次数].LiveTitle == undefined)){
+    setTimeout(function(){
+      var 视频列表 = document.getElementById("视频列表");
+      视频列表.innerHTML = 添加视频(直播源[视频次数].LiveTitle,直播源[视频次数].LiveUrl);
+      视频次数=视频次数+1;
+      开始加载()
+    },100);
+  }};
+var 标签体仓库 = "";
+function 添加视频(LiveTitle,LiveUrl){
+  var 视频地址 = "<tr><td align='center'>"+LiveTitle+"</td></tr><tr><td><video align='center' bgcolor='#00FFCC' width='390' height='250' controls='controls'><source src='"+LiveUrl+"' type='video/mp4'/></video></td></tr><tr><td align='center'><font>——————分割线——————</font></td></tr>";
+  var 生成标签体 = 标签体仓库+视频地址
+  标签体仓库=生成标签体;
+  return 生成标签体;
+};
+
+function 复制网址()
+    {
+        var 内容 = "https://izimui.github.io/WEB-SITE/";
+        var oInput = document.createElement('input');
+        oInput.value = 内容;
+        document.body.appendChild(oInput);
+        oInput.select();
+        document.execCommand("Copy");
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+        alert('复制成功')
+    };
+</script>
+</head>
+<body bgcolor="#FFC0CB">
+<div align="center" style="margin:0px;margin-left:-0.7px;margin-bottom:30px;">
+<table align="center" style="margin:0px" border="1px" bgcolor='#55FF33'>
+<td style="margin:0px;margin-left:4px" bgcolor="#333F3F">
+<div align="center" style="margin:0px">
+<table align="center" style="margin:0px"  border="1px" bgcolor='#FFFF33'>
+<td style="margin:0px" width="390" height="180" bgcolor="#3333FF">
+<br>
+<div align="center" style="margin:0px">
+<br>
+<button style="border-radius:9px; width:290px;height:50px" OnClick="复制网址()">分享网站
+</button>
+<br>
+<br>
+</td>
+</table>
+</div>
+<div align="center" style="margin:0px">
+<table id="视频列表" align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
+</table>
+</div>
+<div align="center" style="margin:0px">
+<table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581">站长B站</a></td>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://chushou.tv/room/41990704.htm">站长直播间</a></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes">联系站长</a></td>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://jq.qq.com/?_wv=1027&k=5YltDyG">加入我们</a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
