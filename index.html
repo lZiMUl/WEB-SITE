@@ -49,12 +49,12 @@ BSFPVW Official website 《 B station banned video viewing site 〔 Beta Version
 </style>
 <script type="text/javascript">
 window.onload=function(){
-if(confirm("Are you Chinese")){
+if(confirm("Are you Chinese") == true){
 window.location.href="https://izimui.github.io/WEB-SITE/index-zh.html";
-};
+} else {
 alert("Update new videos every day \nIf it is not updated \nit is the lack of material for the webmaster \nhow to solve it \nfastly send material to the webmaster😂😂😂 \ncontact the webmaster at the bottom of this website");
 alert("—————— Hardcore announcement —————— \nIf the interface is misplaced \nplease contact the webmaster to fix it \nIf you like, share this website \nShare with your good friends and friends");
-};
+}};
 
 var VideoList = new Array({
   VideoTitle:"Banana Jun (Classic Image)",
@@ -282,7 +282,7 @@ switch(最新视频类型){
 <div align="center" style="margin:0px">
 <form action="" class="parent" style="margin:0px">
 <input id="Searchbox" type="text" placeholder="Enter search content here" style="text-align:center"/><br><br>
-<input type="button" value="searchfor" OnClick="Search()"/>
+<input type="button" value="search for" OnClick="Search()"/>
 </form>
 </div>
 <br>
