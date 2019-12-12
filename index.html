@@ -47,19 +47,10 @@ BSFPVW官网《 B站禁播视频观看网站 〔 Beta版 〕》
   border-radius:9px;
 }
 </style>
-<script>
+<script type="text/javascript">
+window.onload=function(){
 alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面蓝色超链接联系站长");
-var 公告 = confirm("——————硬核公告——————\n如果界面错位请联系站长修复\n喜欢的话把这个网站\n分享给你的哲学♂朋友");
-if(公告){
-var Url2=document.getElementById("数据本").innerText;
-        var oInput = document.createElement('input');
-        oInput.value = Url2;
-        document.body.appendChild(oInput);
-        oInput.select();
-        document.execCommand("Copy");
-        oInput.className = 'oInput';
-        oInput.style.display='none';
-        alert('复制成功');
+alert("——————硬核公告——————\n如果界面错位请联系站长修复\n如果喜欢的话把这个网站\n分享给你的好朋♂友");
 };
 
 var VideoList = new Array({
@@ -223,9 +214,22 @@ function DownloadVideoFile(DownloadVideo){
 };
 
 function UploadVideo(){
-alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长')
+alert('暂时不支持上传\n您可以找站长帮您上传\n滑动页面到底部\n点击蓝色超链接联系站长');
 };
 
+function 复制网址()
+    {
+        var 内容 = "https://izimui.github.io/WEB-SITE/";
+        var oInput = document.createElement('input');
+        oInput.value = 内容;
+        document.body.appendChild(oInput);
+        oInput.select();
+        document.execCommand("Copy");
+        oInput.className = 'oInput';
+        oInput.style.display='none';
+        alert('复制成功')
+    };
+  
 var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
@@ -285,8 +289,8 @@ switch(最新视频类型){
 <br>
 <div align="center" style="margin:0px">
 <label for="unittype" style="margin:0px">
-<font color="#FF9933">请选择视频类型〔 </font>
-<select id="unittype" name="unittype" autofocus >
+<font style="font-size:18px" color="#FF9933">请选择视频类型〔 </font>
+<select id="unittype" style="border-radius:9px;width:140px;height:28px" name="unittype" autofocus >
    <option value="All" selected>全 部</option>
    <option value="Philosophy">哲♂学</option>
    <option value="Kuaishou">快 手</option>
@@ -295,36 +299,21 @@ switch(最新视频类型){
    <option value="Terror">恐 怖</option>
 </select>
 </label>
-<label for="unittype"><font color="#FF9933"> 〕</font>
+<label for="unittype"><font style="font-size:20px" color="#FF9933"> 〕</font>
 </label>
 <br>
 <br>
-<button style="border-radius:9px;" OnClick="UploadVideo()">上传视频
+<button style="border-radius:9px;width:290px;height:50px" OnClick="UploadVideo()">上传视频
+</button>
+<br>
+<br>
+<button style="border-radius:9px; width:290px;height:50px" OnClick="复制网址()">分享网站
 </button>
 <br>
 <br>
 </td>
 </table>
 </div>
-<!--<div align="center" style="margin:0px;">
-<table align="center" style="margin:0px" border="1px" bgcolor='#FFFF33'>
-<td height="70px" style="margin:0px;margin-left:5px" bgcolor="#20383">
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >卧槽 站长 你好骚啊!</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >卧槽 这是什么网站</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >↑上面的 这是哲♂学网站</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >站长牛逼啊</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >支持支持</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >怎么上传视频啊</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >站长是哲学家？</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >有人吗!</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >有!</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >有</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >站长我要上传视频</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >点击下面超链接联系站长</marquee>
-<marquee behavior=scroll direction=left align=middle scrollamount=3 >看我发现了什么宝贝</marquee>
-</td>
-</table>
-</div>-->
 <div align="center" style="margin:0px">
 <table id="视频列表" align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
 </table>
@@ -341,6 +330,5 @@ switch(最新视频类型){
 </tr>
 </table>
 </div>
-<div id="数据本">https://izimui.github.io/WEB-SITE/</div>
 </body>
 </html>
