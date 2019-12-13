@@ -223,7 +223,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuth
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>Video introduction：〔 "+VideoContent+" 〕</p></td>";
   var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>Video by:〔 "+VideoAuthor+" 〕</p></td>";
   var 视频作者简介 = "<td align='center' bgcolor='#00FFCC'><p>Author of the video: 〔"+VideoAuthorContent+" 〕</p></td>";
-  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px; width:290px;height:50px' OnClick=DownloadVideoFile('"+VideoUrl+"')>Download video</button><br><br></td>";
+  var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px; width:290px;height:50px' OnClick=DownloadVideoFile('"VideoTitle+"','"+VideoUrl+"')>Download video</button><br><br></td>";
   var 标签尾 = "</div></tr>";
   var 分割线 = "<td align='center' bgcolor='#CC3300'><br><p align='center'>——————split line——————</p><br></td>";
   var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+视频简介+标签头+视频作者+标签尾+视频作者简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
@@ -231,10 +231,10 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuth
   return 生成标签体;
 };
 
-function DownloadVideoFile(VideoData){
+function DownloadVideoFile(VideoTitle,VideoUrl){
   var link = document.createElement('a');
-  link.setAttribute("download",VideoData+".mp4");
-  link.href = "VideoData/"+VideoData+".mp4";
+  link.setAttribute("download",VideoTitle+".mp4");
+  link.href = "VideoData/"+VideoUrl+".mp4";
   link.click();
 };
 
