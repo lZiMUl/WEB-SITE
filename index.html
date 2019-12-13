@@ -233,11 +233,12 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuth
 };
 
 function DownloadVideoFile(VideoData){
-alert(VideoData)
-  var link = document.createElement('a');
+var 视频数据体 = new Array(VideoData)
+alert(视频数据体[0])
+  /*var link = document.createElement('a');
   link.setAttribute("download",VideoTitle+".mp4");
   link.href = "VideoData/"+VideoUrl+".mp4";
-  link.click();
+  link.click();*/
 };
 
 function UploadVideo(){
