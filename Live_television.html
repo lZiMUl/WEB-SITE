@@ -70,8 +70,9 @@ function 添加视频(LiveTitle,LiveUrl,LiveNumber,LiveNumbers){
   var 视频地址 = "<tr><td align='center'>"+LiveTitle+"</td></tr><tr><td><video align='center' bgcolor='#00FFCC' width='390' height='250' controls='controls'><source src='"+LiveUrl+"' type='video/mp4'/></video></td></tr><tr><td align='center'><font>——————分割线——————</font></td></tr>";
   var 生成标签体 = 标签体仓库+视频地址
   标签体仓库=生成标签体;
+return 生成标签体;
 if(LiveNumber == LiveNumbers){
-  return 生成标签体;
+alert("加载完成")
 }
 };
 
