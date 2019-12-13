@@ -59,17 +59,20 @@ function 开始加载(){
   if(!(直播源[视频次数].LiveTitle == undefined)){
     setTimeout(function(){
       var 视频列表 = document.getElementById("视频列表");
-      视频列表.innerHTML = 添加视频(直播源[视频次数].LiveTitle,直播源[视频次数].LiveUrl);
+      视频列表.innerHTML = 添加视频(直播源[视频次数].LiveTitle,直播源[视频次数].LiveUrl,视频次数,直播源.length);
       视频次数=视频次数+1;
       开始加载()
     },100);
   }};
+
 var 标签体仓库 = "";
-function 添加视频(LiveTitle,LiveUrl){
+function 添加视频(LiveTitle,LiveUrl,LiveNumber,LiveNumbers){
   var 视频地址 = "<tr><td align='center'>"+LiveTitle+"</td></tr><tr><td><video align='center' bgcolor='#00FFCC' width='390' height='250' controls='controls'><source src='"+LiveUrl+"' type='video/mp4'/></video></td></tr><tr><td align='center'><font>——————分割线——————</font></td></tr>";
   var 生成标签体 = 标签体仓库+视频地址
   标签体仓库=生成标签体;
+if(LiveNumber == LiveNumbers){
   return 生成标签体;
+}
 };
 
 function 复制网址()
