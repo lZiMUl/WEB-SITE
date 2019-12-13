@@ -223,7 +223,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuth
   var 视频简介 = "<td align='center' bgcolor='#00FFCC'><p>Video introduction：〔 "+VideoContent+" 〕</p></td>";
   var 视频作者 = "<td align='center' bgcolor='#00FFCC'><p>Video by:〔 "+VideoAuthor+" 〕</p></td>";
   var 视频作者简介 = "<td align='center' bgcolor='#00FFCC'><p>Author of the video: 〔"+VideoAuthorContent+" 〕</p></td>";
-  var 视频下载数据体 = "VideoTitle+","+VideoUrl";
+  var 视频下载数据体 = VideoTitle+","+VideoUrl;
   alert(视频下载数据体);
   var 视频下载 = "<td align='center' bgcolor='#00FFCC'><br><button style='border-radius:9px; width:290px;height:50px' OnClick='DownloadVideoFile("+视频下载数据体+")'>Download video</button><br><br></td>";
   var 标签尾 = "</div></tr>";
