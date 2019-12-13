@@ -54,7 +54,11 @@ var 直播源 = new Array({
   LiveUrl:"http://111.40.205.87/PLTV/88888888/224/3221225721/index.m3u8"
 });
 var 视频次数 = 0;
+
+window.onload=function(){
 开始加载();
+};
+
 function 开始加载(){
   if(!(直播源[视频次数].LiveTitle == undefined)){
     setTimeout(function(){
