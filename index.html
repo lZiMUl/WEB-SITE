@@ -232,7 +232,8 @@ function 添加新列表(SerialNumber,VideoTitle,VideoUrl,VideoContent,VideoAuth
   return 生成标签体;
 };
 
-function DownloadVideoFile(VideoTitle,VideoUrl){
+function DownloadVideoFile(VideoData){
+alert(Data)
   var link = document.createElement('a');
   link.setAttribute("download",VideoTitle+".mp4");
   link.href = "VideoData/"+VideoUrl+".mp4";
