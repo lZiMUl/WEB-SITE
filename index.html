@@ -141,6 +141,13 @@ var VideoList = new Array({
   VideoAuthorContent:"我的B站频道：<a href='https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581'>点击访问</a>"
 });
 
+var Content = window.location.href;
+var Start = Content.indexOf("NAME")
+var End = Content.indexOf("N")
+var 获取最新 = Content.toString().substring(Start+9,End).
+replace(/[NAME=]/g,"")
+if(获取最新 == "true"){
+
 var 视频次数 = 0;
 var 序列次数 = 0;
 
@@ -149,6 +156,8 @@ alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n�
 alert("——————硬核公告——————\n如果界面错位请联系站长修复\n如果喜欢的话把这个网站\n分享给你的好朋♂友");
 视频类型更新();
 All();
+}} else {
+alert("非法操作")
 };
 
 function Search(){
