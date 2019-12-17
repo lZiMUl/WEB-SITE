@@ -145,7 +145,7 @@ var Content = window.location.href;
 var Start = Content.indexOf("Data")
 var End = Content.indexOf("E")
 var 获取最新 = Content.toString().substring(Start+9,End).
-replace(/[NAME=]/g,"")
+replace(/[Data=]/g,"")
 if(获取最新 == "true"){
 
 var 视频次数 = 0;
