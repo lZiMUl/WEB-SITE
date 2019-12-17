@@ -142,8 +142,8 @@ var VideoList = new Array({
 });
 
 var Content = window.location.href;
-var Start = Content.indexOf("NAME")
-var End = Content.indexOf("N")
+var Start = Content.indexOf("Data")
+var End = Content.indexOf("E")
 var 获取最新 = Content.toString().substring(Start+9,End).
 replace(/[NAME=]/g,"")
 if(获取最新 == "true"){
