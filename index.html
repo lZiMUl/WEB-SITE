@@ -159,6 +159,12 @@ var VideoList = new Array({
 var 视频次数 = 0;
 var 序列次数 = 0;
 
+var Content = window.location.href;
+var Start = Content.indexOf("NAME")
+var End = Content.indexOf("N")
+var 获取最新 = Content.toString().substring(Start+9,End).
+replace(/[NAME=]/g,"")
+if(获取最新 == "true"){
 window.onload=function(){
 if(confirm("Are you Chinese") == true){
 window.location.href="https://izimui.github.io/WEB-SITE/index-zh.html";
@@ -167,7 +173,9 @@ alert("Update new videos every day \nIf it is not updated \nit is the lack of ma
 alert("—————— Hardcore announcement —————— \nIf the interface is misplaced \nplease contact the webmaster to fix it \nIf you like, share this website \nShare with your good friends and friends");
 视频类型更新();
 All();
-}};
+}}} else {
+alert("秘钥认证已过期");
+};
 
 function Search(){
 var 获取内容 = document.getElementById("Searchbox").value;
