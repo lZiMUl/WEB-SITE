@@ -152,11 +152,14 @@ var 视频次数 = 0;
 var 序列次数 = 0;
 
 window.onload=function(){
+if(confirm("你是外国人吗？") == true){
+window.location.href="https://izimui.github.io/WEB-SITE/index(Abroad).html";
+} else {
 alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面蓝色超链接联系站长");
 alert("——————硬核公告——————\n如果界面错位请联系站长修复\n如果喜欢的话把这个网站\n分享给你的好朋♂友");
 视频类型更新();
 All();
-}} else {
+}}} else {
 alert("非法操作")
 };
 
