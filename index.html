@@ -92,17 +92,17 @@ var VideoList = new Array({
   VideoAuthor:"lZIMUl",
   VideoAuthorContent:"我的B站频道：<a href='https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581'>点击访问</a>"
 },{
-  VideoTitle:"电钻钻裤裆",
-  VideoType:"Kuaishou",
-  VideoContent:"暂无",
-  VideoAuthor:"lZIMUl",
-  VideoAuthorContent:"我的B站频道： <a href='https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581'>点击访问</a>"
-},{
   VideoTitle:"久本",
   VideoType:"Hunting",
   VideoContent:"暂无",
   VideoAuthor:"一只羊驼656",
   VideoAuthorContent:"我的B站频道：<a href='https://space.bilibili.com/361202505?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1576676127134'>点击访问</a>"
+},{
+  VideoTitle:"电钻钻裤裆",
+  VideoType:"Kuaishou",
+  VideoContent:"暂无",
+  VideoAuthor:"lZIMUl",
+  VideoAuthorContent:"我的B站频道： <a href='https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581'>点击访问</a>"
 },{
   VideoTitle:"骨灰杨诺夫",
   VideoType:"Kuaishou",
@@ -207,6 +207,19 @@ function Kuaishou(){
       Kuaishou();
     },10)
 }};
+  
+function Hunting(){
+  if(!(VideoList[视频次数].VideoTitle == undefined)){
+    setTimeout(function(){
+      if(VideoList[视频次数].VideoType == "Hunting"){
+      var 猎奇视频列表 = document.getElementById("视频列表");
+      猎奇视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
+      序列次数=序列次数+1;
+}; 
+      视频次数=视频次数+1;
+      Hunting();
+    },10)
+}};
 
 var 标签体仓库 = "";
 function 添加新列表(SerialNumber,VideoTitle,VideoContent,VideoAuthor,VideoAuthorContent){
@@ -281,6 +294,9 @@ switch(最新视频类型){
     case "Terror":
     alert("尽情期待");
     break;
+    case "Hunting":
+    Hunting();
+    break;
 }};
 视频类型更新();
 },100)
@@ -316,6 +332,7 @@ switch(最新视频类型){
    <option value="FamousScene">名场面</option>
    <option value="Ghost">鬼 畜</option>
    <option value="Terror">恐 怖</option>
+   <option value="Hunting">猎 奇</option>
 </select>
 </label>
 <label for="unittype"><font style="font-size:20px" color="#FF9933"> 〕</font>
