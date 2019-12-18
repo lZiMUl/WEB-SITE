@@ -158,6 +158,7 @@ alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n�
 alert("——————硬核公告——————\n如果界面错位请联系站长修复\n如果喜欢的话把这个网站\n分享给你的好朋♂友");
 视频类型更新();
 All();
+刷新时间();
 }} else {
 alert("非法操作");
 window.location.href="http://izimui.github.io/Tool/";
@@ -301,6 +302,22 @@ switch(最新视频类型){
 视频类型更新();
 },100)
 };
+
+function 刷新时间(){
+  setTimeout(function(){
+    var 当前时间 = {
+年:new Date().getFullYear(),
+月:new Date().getMonth() + 1,
+日:new Date().getDate(),
+时:new Date().getHours(),
+分:new Date().getMinutes(),
+秒:new Date().getSeconds()
+};
+var 时间 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.日 + "日" + 当前时间.时 + "时" + 当前时间.分 + "分" + 当前时间.秒 + "秒";
+    document.getElementById("当前时间").innerHTML = 时间;
+    刷新时间();
+  },10);
+}
 </script>
 </head>
 <body bgcolor="#FFC0CB">
@@ -370,6 +387,9 @@ switch(最新视频类型){
 <table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
 <tr>
 <td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://izimui.github.io/WEB-SITE/Live_television.html">电视直播</a></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><p id="当前时间"></p></td>
 </tr>
 </table>
 </div>
