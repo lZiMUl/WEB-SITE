@@ -221,7 +221,7 @@ window.location.href="https://m.baidu.com/s?word="+获取内容;
 }};
 
 function All(){
-  if(!(VideoList[视频次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == "undefined")){
     setTimeout(function(){
       var 全部视频列表 = document.getElementById("视频列表");
       全部视频列表.innerHTML=添加新列表(序列次数+1,VideoList[视频次数].VideoTitle,VideoList[视频次数].VideoContent,VideoList[视频次数].VideoAuthor,VideoList[视频次数].VideoAuthorContent);
@@ -232,7 +232,7 @@ function All(){
 }};
 
 function Philosophy(){
-  if(!(VideoList[视频次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == "undefined")){
     setTimeout(function(){
       if(VideoList[视频次数].VideoType == "Philosophy"){
       var 哲学视频列表 = document.getElementById("视频列表");
@@ -245,7 +245,7 @@ function Philosophy(){
 }};
 
 function Kuaishou(){
-  if(!(VideoList[视频次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == "undefined")){
     setTimeout(function(){
       if(VideoList[视频次数].VideoType == "Kuaishou"){
       var 快手视频列表 = document.getElementById("视频列表");
@@ -258,7 +258,7 @@ function Kuaishou(){
 }};
   
 function Hunting(){
-  if(!(VideoList[视频次数].VideoTitle == undefined)){
+  if(!(VideoList[视频次数].VideoTitle == "undefined")){
     setTimeout(function(){
       if(VideoList[视频次数].VideoType == "Hunting"){
       var 猎奇视频列表 = document.getElementById("视频列表");
