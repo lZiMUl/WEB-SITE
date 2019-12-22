@@ -47,79 +47,6 @@ BSFPVW官网《 B站禁播视频观看网站 〔 Beta版 〕》
   border-radius:9px;
 }
 </style>
-</head>
-<body bgcolor="#FFC0CB">
-<div id="Body" align="center" style="margin:0px;margin-left:-0.7px;margin-bottom:30px;">
-<table align="center" style="margin:0px" border="1px" bgcolor='#55FF33'>
-<td style="margin:0px;margin-left:4px" bgcolor="#333F3F">
-<div align="center" style="margin:0px">
-<table align="center" style="margin:0px"  border="1px" bgcolor='#FFFF33'>
-<td style="margin:0px" width="390" height="180" bgcolor="#3333FF">
-<br>
-<div align="center" style="margin:0px">
-<form action="" class="parent" style="margin:0px">
-<input id="Searchbox" type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br><br>
-<input type="button" value="搜索" OnClick="Search()"/>
-</form>
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div align="center" style="margin:0px">
-<label for="unittype" style="margin:0px">
-<font style="font-size:18px" color="#FF9933">请选择视频类型〔 </font>
-<select id="unittype" style="border-radius:9px;width:140px;height:28px" name="unittype" autofocus >
-   <option value="All" selected>全 部</option>
-   <option value="Philosophy">哲♂学</option>
-   <option value="Kuaishou">快 手</option>
-   <option value="Terror">恐 怖</option>
-   <option value="Hunting">猎 奇</option>
-</select>
-</label>
-<label for="unittype"><font style="font-size:20px" color="#FF9933"> 〕</font>
-</label>
-<br>
-<br>
-<button style="border-radius:9px;width:290px;height:50px" OnClick="UploadVideo()">上传视频
-</button>
-<br>
-<br>
-<button style="border-radius:9px; width:290px;height:50px" OnClick="复制网址()">分享网站
-</button>
-<br>
-<br>
-</td>
-</table>
-</div>
-<div align="center" style="margin:0px">
-<table id="视频列表" align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
-</table>
-</div>
-<div align="center" style="margin:0px">
-<table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
-<tr>
-<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581" style="text-decoration: none;">站长B站</a></td>
-<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://chushou.tv/room/41990704.htm" style="text-decoration: none;">站长直播</a></td>
-</tr>
-<tr>
-<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes" style="text-decoration: none;">联系站长</a></td>
-<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://jq.qq.com/?_wv=1027&k=5YltDyG" style="text-decoration: none;">加入我们</a></td>
-</tr>
-</table>
-</div>
-<div align="center" style="margin:0px">
-<table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
-<tr>
-<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://izimui.github.io/WEB-SITE/Live_television.html" style="text-decoration: none;">电视直播</a></td>
-</tr>
-<tr>
-<td align="center" bgcolor="#969696" width="395" height="60"><p id="当前时间"></p></td>
-</tr>
-</table>
-</div>
-</body>
 <script type="text/javascript">
 var VideoList = new Array({
   VideoTitle:"香蕉君(镇站之宝)",
@@ -293,10 +220,11 @@ var 视频次数 = 0;
 var 序列次数 = 0;
 alert("每天更新新的视频\n如果没有更新\n那就是站长缺素材\n那怎么解决呢\n快给站长发素材😂😂😂\n此网站最下面蓝色超链接联系站长");
 alert("——————硬核公告——————\n这个社会是黑暗的不要想象成安全的\n来自〔 好名字那都哪去了 〕\n\n\n如果界面错位请联系站长修复\n如果喜欢的话把这个网站\n分享给你的好朋♂友");
+setTimeout(function(){
 视频类型更新();
 All();
 刷新时间();
-}} else {
+},2000)}} else {
 alert("非法操作");
 window.location.href="http://izimui.github.io/Tool/";
 };
@@ -450,4 +378,77 @@ var 时间 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.
   },10);
 }
 </script>
+</head>
+<body bgcolor="#FFC0CB">
+<div id="Body" align="center" style="margin:0px;margin-left:-0.7px;margin-bottom:30px;">
+<table align="center" style="margin:0px" border="1px" bgcolor='#55FF33'>
+<td style="margin:0px;margin-left:4px" bgcolor="#333F3F">
+<div align="center" style="margin:0px">
+<table align="center" style="margin:0px"  border="1px" bgcolor='#FFFF33'>
+<td style="margin:0px" width="390" height="180" bgcolor="#3333FF">
+<br>
+<div align="center" style="margin:0px">
+<form action="" class="parent" style="margin:0px">
+<input id="Searchbox" type="text" placeholder="这里输入搜索内容" style="text-align:center"/><br><br>
+<input type="button" value="搜索" OnClick="Search()"/>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div align="center" style="margin:0px">
+<label for="unittype" style="margin:0px">
+<font style="font-size:18px" color="#FF9933">请选择视频类型〔 </font>
+<select id="unittype" style="border-radius:9px;width:140px;height:28px" name="unittype" autofocus >
+   <option value="All" selected>全 部</option>
+   <option value="Philosophy">哲♂学</option>
+   <option value="Kuaishou">快 手</option>
+   <option value="Terror">恐 怖</option>
+   <option value="Hunting">猎 奇</option>
+</select>
+</label>
+<label for="unittype"><font style="font-size:20px" color="#FF9933"> 〕</font>
+</label>
+<br>
+<br>
+<button style="border-radius:9px;width:290px;height:50px" OnClick="UploadVideo()">上传视频
+</button>
+<br>
+<br>
+<button style="border-radius:9px; width:290px;height:50px" OnClick="复制网址()">分享网站
+</button>
+<br>
+<br>
+</td>
+</table>
+</div>
+<div align="center" style="margin:0px">
+<table id="视频列表" align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
+</table>
+</div>
+<div align="center" style="margin:0px">
+<table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://space.bilibili.com/291883246?share_medium=android&share_source=copy_link&bbid=XYF83CAFCD3359D0884B8E2CBE73B95A05E86&ts=1575260599581" style="text-decoration: none;">站长B站</a></td>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://chushou.tv/room/41990704.htm" style="text-decoration: none;">站长直播</a></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://wpa.qq.com/msgrd?v=3&uin=2908554069&site=qq&menu=yes" style="text-decoration: none;">联系站长</a></td>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://jq.qq.com/?_wv=1027&k=5YltDyG" style="text-decoration: none;">加入我们</a></td>
+</tr>
+</table>
+</div>
+<div align="center" style="margin:0px">
+<table align="center" style="margin:0px" border="1px" bgcolor="#FFFF33">
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><a width="338" height="20" href="https://izimui.github.io/WEB-SITE/Live_television.html" style="text-decoration: none;">电视直播</a></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#969696" width="395" height="60"><p id="当前时间"></p></td>
+</tr>
+</table>
+</div>
+</body>
 </html>
