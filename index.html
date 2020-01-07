@@ -372,6 +372,13 @@ function 复制网址()
         alert("复制成功，快分享给你的好朋♂友吧");
     };
   
+  function 下载软件(){
+  var link = document.createElement('a');
+  link.setAttribute("download","BSFPVW〔 移动版 〕");
+  link.href = "BSFPVW.apk";
+  link.click();
+  }
+  
 var 默认视频类型 = "All";
 function 视频类型更新(){
 setTimeout(function(){
@@ -465,7 +472,7 @@ var 时间 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.
 </button>
 <br>
 <br>
-<button style="margin:0px;border-radius:9px; width:290px;height:50px" href="https://IZIMUI.github.io/WEB-SITE/BSFPVW.apk">下载官方APPS
+<button style="margin:0px;border-radius:9px; width:290px;height:50px" OnClick="下载软件()">下载官方APPS
 </button>
 <br>
 <br>
