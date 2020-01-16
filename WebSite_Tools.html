@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<head>
+<title>
+\u编码/MD5加密/UUID
+</title>
+</head>
+<body bgcolor="696969">
+<div align="center">
+<h2>明文</h2><textarea id="Input" style="text-align: center; width: 400px; height: 100px; border: 4px solid red; font:bold 20px Arial, Helvetica, sans-serif;" rows="5" cols="50" height="100"></textarea><br><br>
+<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696"  onclick="if(document.getElementById('Input').value !== ''){document.getElementById('Output').value = Encode(document.getElementById('Input').value)}else{alert('请输入内容在编码')}">\U编码</button>&nbsp;&nbsp;
+<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696" onclick="if(document.getElementById('Input').value !== ''){document.getElementById('Output').value = Decode(document.getElementById('Input').value)}else{alert('请输入内容在解码')}">\U解码</button><br><br>
+<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696" onclick="if(document.getElementById('Input').value !== ''){document.getElementById('Output').value = MD5(document.getElementById('Input').value)}else{alert('请输入内容在加密')}">MD5加密</button><br><br>
+<h2>暗文</h2><textarea id="Output" style="text-align: center; width: 400px; height: 100px; border: 4px solid red; font:bold 20px Arial, Helvetica, sans-serif;" rows="5" cols="50"></textarea><br><br>
+<h2>UUID</h2><textarea id="UUID" style="text-align: center; width: 400px; height: 100px; border: 4px solid red; font:bold 20px Arial, Helvetica, sans-serif;" rows="5" cols="50"></textarea><br><br>
+<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696" onclick="document.getElementById('UUID').value = UUID()">获取UUID</button><br><br>
+</div>
+</body>
+<script src="http://izimui.github.io/WEB-SITE/lZIMUl.js"></script>
+</html>
