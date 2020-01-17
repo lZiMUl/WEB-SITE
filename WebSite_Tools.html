@@ -13,7 +13,7 @@
 <h2>获取网页源码</h2>
 <p>请输入目标URL：<input id="Url" type="text"style="text-align: center; width: 200px; height: 30px; border: 2px solid red; font:bold 7px Arial, Helvetica, sans-serif;"/><br><br>
 <textarea id="WebCode" style="text-align: center; width: 395px; height: 600px; border: 4px solid red; font:bold 20px Arial, Helvetica, sans-serif;" rows="5" cols="50" height="100"></textarea><br><br>
-<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696"  onclick="jQuery()">获取</button><br><br><br><br>
+<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696"  onclick="jQuerys()">获取</button><br><br><br><br>
 </div>
 <div style="border: 4px solid green;">
 <h2>明文</h2>
@@ -27,13 +27,13 @@
 <div style="border: 4px solid blue;">
 <h2>UUID</h2>
 <textarea id="UUID" style="text-align: center; width: 395px; height: 100px; border: 4px solid blue; font:bold 20px Arial, Helvetica, sans-serif;" rows="5" cols="50"></textarea><br><br>
-<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696" onclick="getUUID()">获取UUID</button><br><br><br><br>
+<button style="width:30%; height:40px; border-radius:9px; bgcolor:#969696" onclick="getUUIDs()">获取UUID</button><br><br><br><br>
 </div>
 </div>
 </body>
 <script src="http://izimui.github.io/WEB-SITE/lZIMUl.js"></script>
 <script>
-function jQuery(){
+function jQuerys(){
 if(document.getElementById('Url').value !== ''){
 $.ajax({
     type: 'GET', 
@@ -68,7 +68,7 @@ if(document.getElementById('Input').value !== ''){
     alert('请输入内容在加密')
 }};
 
-function getUUID(){
+function getUUIDs(){
 document.getElementById('UUID').value = UUID();
 };
 </script>
