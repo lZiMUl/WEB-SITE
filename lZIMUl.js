@@ -1,6 +1,6 @@
 /* 
-此外部〔 JavaScript 〕暂时包含4种原生函数 更多原生函数JS 请尽情期待 作者QQ〔 2908554069 〕  
-引用外部此JS，即可使用〔 MD5 〕〔 UUID 〕〔 \U 〕〔 jQuery 〕4种原生函数
+此外部〔 JavaScript 〕暂时包含5种原生函数 更多原生函数JS 请尽情期待 作者QQ〔 2908554069 〕  
+引用外部此JS，即可使用〔 MD5 〕〔 UUID 〕〔 \U 〕〔 jQuery 〕〔 CSS悬浮登陆界面 〕5种原生函数
 此标签内禁止输入任何字符，输入字符后无法使用
 复制下面这条引用标签，即可使用
 <script src="http://izimui.github.io/WEB-SITE/lZIMUl.js"></script>
