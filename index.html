@@ -439,7 +439,20 @@ var 时间 = 当前时间.年 + "年" + 当前时间.月 + "月" + 当前时间.
     document.getElementById("当前时间").innerHTML = 时间;
     刷新时间();
   },10);
-}
+};
+
+var Video = document.getElementById("Video");
+Play.addEventListener("click", function(){
+Video.play();
+});
+Stop.addEventListener("click", function(){
+Video.pause();
+});
+SpeedChangea.addEventListener("click", function(){
+});
+Replay.addEventListener("click", function(){
+Video.currentTime = 0;
+});
 </script>
 </head>
 <body bgcolor="#FFC0CB">
