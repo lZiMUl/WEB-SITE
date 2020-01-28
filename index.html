@@ -356,7 +356,7 @@ function 添加新列表(SerialNumber,VideoTitle,VideoContent,VideoAuthor,VideoA
   var 视频下载 = "<td align='center' bgcolor='#00FFCC' style='margin:0px'><br><button style='border-radius:9px; width:290px;height:50px' OnClick=DownloadVideoFile('"+VideoTitle+"')>下载视频</button><br><br></td>";
   var 标签尾 = "</div></tr>";
   var 分割线 = "<td align='center' bgcolor='#CC3300'><br><p align='center'>——————分割线——————</p><br></td>";
-  var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签尾+视频简介+标签头+视频作者+标签尾+视频作者简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
+  var 生成标签体 = 标签体仓库+序号+标签头+视频标题+标签尾+标签头+视频地址+标签头+视频控件+标签尾+视频简介+标签头+视频作者+标签尾+视频作者简介+标签头+视频下载+标签尾+标签头+分割线+标签尾;
   标签体仓库=生成标签体;
   return 生成标签体;
 };
