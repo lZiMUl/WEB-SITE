@@ -1,5 +1,5 @@
 var GetUrl = window.location.href;
 var Start = "Content=";
-var End = GetUrl.indexOf("#");
-var Content = GetUrl.substring((GetUrl.indexOf(Start))+Start.length,End);
+var End = "#";
+var Content = GetUrl.substring((GetUrl.indexOf(Start))+Start.length, GetUrl.indexOf(End));
 alert(Content);
