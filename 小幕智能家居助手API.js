@@ -1,5 +1,6 @@
-var GetUrl = window.location.href;
+var UrlContent = window.location.href;
 var Start = "Content=";
-var End = "#";
-var Content = GetUrl.substring((GetUrl.indexOf(Start))+Start.length, GetUrl.indexOf(End));
-ContentView.innerHTML = Content;
+var Ene = "#";
+var FilterContent = UrlContent.substring((UrlContent.indexOf(Start))+UrlContent.length, UrlContent.indexOf(End));
+ViewContent.innerHTML = "FilterContent";
+alert("FilterContent");
