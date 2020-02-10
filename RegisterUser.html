@@ -12,9 +12,11 @@ Background-Repeat: No-Repeat;
 Background-Size: Cover;
 }
 
-input,h3{
+input{
 Width: 300px;
 Height: 30px;
+Border: 1px solid gray;
+outline: none;
 Margin: 6px Auto;
 Top: 50px Auto;
 Border-Radius: 5px;
@@ -28,6 +30,7 @@ Height: 40px;
 Margin: 20px Auto;
 Top: 12px Auto;
 Border-Radius: 5px;
+outline: none;
 Position: Relative Auto;
 background: Green;
 }
@@ -48,7 +51,7 @@ background: Green;
 <input id="Instagram" type="url" placeholder="Instagram URL"/><br>
 <input id="GitHub" type="url" placeholder="GitHub URL"/><br>
 <input id="BiliBili" type="url" placeholder="BiliBili URL"/><br>
-<br><h3>Tips：如果没有可以空着不填写</h3>
+<br><h3><font color="red">Tips：如果没有可以空着不填写</font></h3>
 <button onclick="Add(
 document.getElementById('Name').value, 
 document.getElementById('Gender').value, 
